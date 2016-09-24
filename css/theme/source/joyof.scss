@@ -1,0 +1,123 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal section {
+
+  img {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    background: none;
+  }
+
+	// Block Quotes
+
+	&.quote-slide {
+		&:after {
+			content: '';
+			width: 200px;
+			height: 300px;
+			background: url('../../img/Bob-Ross-whitebg.jpg');
+			background-size: cover;
+			z-index: -1;
+			position: absolute;
+			bottom: -4em;
+			left: 0;
+		}
+	}
+
+	blockquote {
+		background: none;
+		box-shadow: none;
+		text-align: left;
+		border-top: 8px solid currentColor;
+		padding-top: 1.5em;
+		margin-top: -1.5em;
+		width: 100%;
+		font-style: normal;
+		font-size: 1.5em;
+
+		footer {
+			font-style: italic;
+			margin-top: 1em;
+			text-align: right;
+		}
+	}
+
+	.section--half {
+		width: 50%;
+    float: left;
+	}
+
+	.difference {
+		mix-blend-mode: difference;
+	}
+
+	.can-overlap {
+		transition: all 1s;
+		cursor: pointer;
+		position: relative;
+
+		&:hover {
+			&:after {
+				content: 'overlap me';
+				position: absolute;
+				top: .5em;
+				right: .8em;
+				font-size: .8em;
+				background-color: white;
+				padding: 0 .2em;
+			}
+		}
+	}
+
+	.is-overlapped {
+		transform: translate(-100%);
+	}
+}

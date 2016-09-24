@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/joyof.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+
+      <!-- Intro -->
+			<div class="slides">
+
+        <section>
+          <img src="img/joyofoptimizing-intro.svg" alt="">
+          <aside class="notes" data-markdown>
+            - welcome to the joy of optimizing
+            - we want to make happy little pixels
+            - the litteler the better
+          </aside>
+        </section>
+        <section data-background="img/Bob_Ross.jpg">
+          <aside class="notes" data-markdown>
+            - Brief intro/history of Bob Ross
+            - When preparing for this presentation I tried to put myself in the shoes of Bob Ross as much as possible
+          </aside>
+        </section>
+				<section data-background="img/Bob_Ross_Una.jpg">
+          <aside class="notes" data-markdown>
+            - It didn't really work.
+            - I have like a weird beard growing out of my neck
+            - Literal neck beard
+            - So here's a better version
+          </aside>
+        </section>
+				<section>Personal Intro stuff (@una)</section>
+
+        <!-- Section One: Setup - Why this is important -->
+
+				<section>
+					<img src="img/sowhat.svg" alt="">
+				</section>
+
+				<section>
+					<img src="img/funfacts.svg" alt="">
+				</section>
+
+        <section>
+          Describe why image optimization is important, find new studies, dont repeat old facts
+          NEW INFO: https://www.soasta.com/blog/google-mobile-web-performance-study/
+          - Average load time for mobile sites is 19 seconds over 3G .
+          - 53% of visits to mobile sites are abandoned after 3 seconds
+        </section>
+
+        <section>
+          If you have to send a loading indicator, you're not optimizing your images enough -- Bruce Lawson (Q&A @ SmartWeb Conf)
+        </section>
+
+        <section class="quote-slide">
+          <blockquote>
+            "You can have anything you want in the world — once you help everyone around you get what they want."
+            <footer>&mdash; Bob Ross</footer>
+          </blockquote>
+        </section>
+
+        <!-- Section Two: Image Types - Understanding your Canvas -->
+
+        <section class="quote-slide">
+          <blockquote>
+            "Find freedom in this canvas."
+            <footer>&mdash; Bob Ross</footer>
+          </blockquote>
+          <aside class="notes" data-markdown>
+            - we must first understand the canvas
+            - we must first understand the paints
+            - we must first understand the pixels
+          </aside>
+        </section>
+
+        <section>
+          This field is a complicated landscape
+          -- landscape background --
+					--> vocabular section appears on top of it
+        </section>
+
+
+        <section>
+          Basic image formats (gif, png, jpg, svg)
+        </section>
+
+        <section data-markdown>
+          <h2>Lossy v. Lossless</h2>
+
+          | lossy | lossless |
+          |--- |--- |
+          |jpg, webp | png, svg, webp ____|
+
+          <aside class="notes">
+            - every time you save a jpg image it loses quality, no matter what <-- this is good for images with a lot of data, the jpg will try to do a bit of optimization and compression each time
+            - when you save photos using PNG, the generated files are huge, compared to lossy formats such as JPEG
+          </aside>
+        </section>
+
+        <section>
+          When to use various formats
+        </section>
+
+				<section>
+					JPG * Lossy v. Lossless
+				</section>
+
+				<section>
+					Progressive JPG vs Baseline (pros and cons)
+				</section>
+
+				<section>
+          <h1>JPEG 2000</h1>
+          <ul id="caniuse--result-list" data-propName="jpeg2000" data-browsers="ie edge safari firefox chrome"></ul>
+        </section>
+
+				<section>
+          <h1>JPEG XR</h1>
+          <ul id="caniuse--result-list" data-propName="jpegxr" data-browsers="ie edge safari firefox chrome"></ul>
+        </section>
+
+        <section>
+          The new kid on the block: WebP
+          https://developers.google.com/speed/webp/
+        </section>
+
+        <section>
+          How WebP Works: Predictive coding
+          - both lossy and lossless variants
+          <aside class="notes">
+            Predictive coding uses the values in neighboring blocks of pixels to predict the values in a block, and then encodes only the difference
+          </aside>
+        </section>
+
+        <section>
+          image time
+          WebP Lossless: https://developers.google.com/speed/webp/docs/webp_lossless_alpha_study#results
+          WebP Lossy: https://developers.google.com/speed/webp/docs/webp_study
+          <aside class="notes">
+            - lossy WebP also supports transparency, making it comparable & faster than png
+          </aside>
+        </section>
+
+        <section>
+          <h1>WebP</h1>
+          <ul id="caniuse--result-list" data-propName="webp" data-browsers="ie edge safari firefox chrome"></ul>
+        </section>
+
+        <section>
+          converting to WebP (ie. how to use it): https://developers.google.com/speed/webp/docs/precompiled
+        </section>
+
+        <section>
+          BPG file format
+          <aside class="notes">
+            - The newer kid on the block
+          </aside>
+        </section>
+
+        <section>
+          <h1>Free Lossless Image Format (FLIF)</h1>
+          <aside class="notes">
+            The Newest kid on the block: FLIF
+            http://cloudinary.com/blog/flif_the_new_lossless_image_format_that_outperforms_png_webp_and_bpg
+          </aside>
+        </section>
+
+        <section>
+          -- image from the site above here comparing file formats --
+        </section>
+
+        <section>
+          <h1>FLIF</h1>
+          <ul id="caniuse--result-list" data-propName="flif" data-browsers="ie edge safari firefox chrome"></ul>
+        </section>
+
+        <section>
+          Animation:
+            - animated png vs gif vs animated flif vs animated bpg vs mng
+        </section>
+
+				<section>
+          <h1>APNG</h1>
+          <ul id="caniuse--result-list" data-propName="apng" data-browsers="ie edge safari firefox chrome"></ul>
+        </section>
+
+        <!-- Section Three: Automatic Image Optimization -->
+
+				<section>
+					<img src="img/automation.svg" alt="">
+				</section>
+
+        <section>
+          ImageMagick & color spaces
+          http://www.imagemagick.org/script/formats.php
+        </section>
+
+        <section>
+          setting up a gulp task to run imageoptim
+        </section>
+
+        <!-- Section Four: Semi-Automatic Image Optimization -->
+
+				<section>
+					<img src="img/semiautomation.svg" alt="">
+				</section>
+
+        <section>
+          ImageAlpha
+        </section>
+
+        <section>
+          ImageOptim
+        </section>
+
+        <!-- Section Five: Manual Image Optimization -->
+
+				<section>
+					<img src="img/manual.svg" alt="">
+				</section>
+
+        <section>
+          <img src="img/website-mock.png" alt="" style="border: 3px solid #222;">
+          <aside class="notes" data-markdown>
+            - okay so lets design a website!
+            - this yellow area is a huge buzzkill to your page performance
+            - this section is about those large, heavy, primary elements
+          </aside>
+        </section>
+
+        <section>
+          <h2>Spot the Difference!</h2>
+          <div class="section--half">
+            <img src="img/mountain--original.jpg" alt="">
+            <h3>409kb</h3>
+          </div>
+          <div class="section--half difference can-overlap">
+            <img src="img/mountain--blur.jpg" alt="">
+            <h3>264kb</h3>
+          </div>
+        </section>
+
+        <section>
+          <h1>Protip: Blur is your Friend</h1>
+        </section>
+
+        <section>
+          DO Example
+        </section>
+
+        <section>
+          Photoshop Save for Web -- color spaces and options
+        </section>
+
+        <!-- Section Six: Conclusion -->
+
+        <section>
+          Tips:
+          	- never send an image larger than its biggest containing box
+						- always be optimizing
+						- small improvements are improvements
+						- educate the entire team
+        </section>
+
+				<section>
+					<img src="img/balance.svg" alt="">
+					<aside class="notes">
+						find balance between quality and optimization
+					</aside>
+				</section>
+
+        <!-- End Quote -->
+        <section class="quote-slide">
+          <blockquote>
+            "Talent is a pursued interest. Anything that you’re willing to practice, you can do."
+            <footer>&mdash; Bob Ross</footer>
+          </blockquote>
+        </section>
+
+        <!-- And to leave you with my favorite bob ross quote-->
+        <section>
+          <blockquote>
+            "Remember how free clouds are. They just lay around in the sky all day long."
+            <footer>&mdash; Bob Ross</footer>
+          </blockquote>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'none',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../node_modules/caniuse-component/caniuseComponent/scripts.js', async: true },
+          { src: '../node_modules/caniuse-component/caniuseComponent/style.css' }
+				]
+			});
+
+      // Click scripts
+      var overlappers = document.querySelectorAll('.can-overlap');
+
+      overlappers.forEach(function(el) {
+        el.addEventListener('click', function(el) {
+          console.log(el, this);
+          this.classList.toggle('is-overlapped');
+        })
+      })
+		</script>
+	</body>
+</html>
