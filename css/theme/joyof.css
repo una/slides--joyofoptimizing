@@ -4,6 +4,7 @@
  * By Hakim El Hattab, http://hakim.se
  */
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url("https://fonts.googleapis.com/css?family=Baloo+Thambi");
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
@@ -41,11 +42,11 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #222;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Baloo Thambi", "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -286,6 +287,9 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
+.reveal section h1, .reveal section h2, .reveal section h3 {
+  line-height: 1.35; }
+
 .reveal section img {
   border: none;
   box-shadow: none;
@@ -312,7 +316,8 @@ body {
   margin-top: -1.5em;
   width: 100%;
   font-style: normal;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  font-family: "Baloo Thambi", "Source Sans Pro", Helvetica, sans-serif; }
   .reveal section blockquote footer {
     font-style: italic;
     margin-top: 1em;
@@ -322,6 +327,14 @@ body {
   width: 50%;
   float: left; }
 
+.reveal section .section--third {
+  width: 33%;
+  float: left; }
+
+.reveal section .section--fourth {
+  width: 25%;
+  float: left; }
+
 .reveal section .difference {
   mix-blend-mode: difference; }
 
@@ -329,14 +342,32 @@ body {
   transition: all 1s;
   cursor: pointer;
   position: relative; }
-  .reveal section .can-overlap:hover:after {
-    content: 'overlap me';
-    position: absolute;
-    top: .5em;
-    right: .8em;
-    font-size: .8em;
-    background-color: white;
-    padding: 0 .2em; }
+  .reveal section .can-overlap.current-fragment {
+    transition-duration: 1s;
+    transform: translate(-100%); }
+
+.reveal section.flex.present {
+  display: flex !important;
+  align-items: center; }
 
 .reveal section .is-overlapped {
   transform: translate(-100%); }
+
+.reveal section .blank-space {
+  background: black;
+  color: white;
+  padding: 0 .3em; }
+  .reveal section .blank-space-intro {
+    background: black;
+    color: white;
+    padding: 0 .3em;
+    width: 7em;
+    margin-right: .2em;
+    display: inline-block; }
+
+.reveal section .source {
+  margin: 3em 0 0;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-size: .5em; }

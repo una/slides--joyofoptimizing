@@ -31,13 +31,13 @@
           <img src="img/joyofoptimizing-intro.svg" alt="">
           <aside class="notes" data-markdown>
             - welcome to the joy of optimizing
-            - we want to make happy little pixels
+            - this talk is about making happy little pixels
             - the litteler the better
           </aside>
         </section>
         <section data-background="img/Bob_Ross.jpg">
           <aside class="notes" data-markdown>
-            - Brief intro/history of Bob Ross
+            - Bob Ross is a famous oil painter/tv show host from the 80's -- incredible work
             - When preparing for this presentation I tried to put myself in the shoes of Bob Ross as much as possible
           </aside>
         </section>
@@ -49,37 +49,762 @@
             - So here's a better version
           </aside>
         </section>
-				<section>Personal Intro stuff (@una)</section>
+
+				<section data-background="img/intro/speakersammy.png">
+          <h1 class="blank-space">@una</h1>
+          <div class="section--half" style="opacity: 0"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
+          <div class="section--half" style="opacity: 0" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
+        </section>
+
+				<section>
+          <h1 class="blank-space">@una</h1>
+          <div class="section--half"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
+          <div class="fragment section--half" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
+        </section>
+
+        <section data-background-color="RGB(88, 60, 160)">
+          <h1>Images on the Web</h1>
+          <ol>
+            <li class="fragment"><h3><span class="blank-space-intro">The Problem:</span> Understanding Why</h3></li>
+            <li class="fragment"><h3><span class="blank-space-intro">The Medium:</span> What's Coming Next</h3></li>
+            <li class="fragment"><h3><span class="blank-space-intro">Solutions:</span> Automatic to Manual</h3></li>
+            <li class="fragment"><h3><span class="blank-space-intro">Example Time:</span> Yay! </h3></li>
+          </ol>
+          
+        </section>
 
         <!-- Section One: Setup - Why this is important -->
 
-				<section>
+        <section data-background-color="RGB(254, 232, 97)">
+          <img src="img/the-evolution-of-the-camera_23-2147515826.jpg" alt="">
+          <aside class="notes" data-markdown>
+            - First of all, how did we get here? A lot of it has to do with the technology we have today
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/camera-ownership.jpg" alt="">
+          <aside class="notes" data-markdown>
+            - "camera" ownership has increased, it's gotten cheaper to take photos, keep data, share large files
+            - The best camera is the one you have with you
+          </aside>
+        </section>
+
+        <section data-background-image="img/selfie-with-hillary.jpg-large">
+          <!--<img src="img/selfie-with-hillary.jpg-large" alt="">-->
+          <aside class="notes" data-markdown>
+            - This is where we are now.
+            - Now the cameras we have with us take 12MP photos (iPhone 7 specs)
+          </aside>
+        </section>
+
+        <section>
+          <h1>Irresponsible Imaging</h1>
+          <aside class="notes" data-markdown>
+            We're at a phase where we can send images without thinking of the consequences
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/loader.gif" style="height: 20vh; margin-top: 10vh;" alt="">
+          <aside class="notes" data-markdown>
+            this is what we're doing to people with irresponsible imaging
+          </aside>
+        </section>
+
+        <section data-background-image="img/angrycat.gif">
+        </section>
+
+        <section>
 					<img src="img/sowhat.svg" alt="">
 				</section>
 
 				<section>
 					<img src="img/funfacts.svg" alt="">
+          <aside class="notes" data-markdown>
+            - New Google study from September 2016 (last month)
+            - surveyed over 10,000 mobile websites on 3G
+            - We'll play a game
+          </aside>
 				</section>
 
         <section>
-          Describe why image optimization is important, find new studies, dont repeat old facts
-          NEW INFO: https://www.soasta.com/blog/google-mobile-web-performance-study/
-          - Average load time for mobile sites is 19 seconds over 3G .
-          - 53% of visits to mobile sites are abandoned after 3 seconds
+          <h2>Average load time for mobile sites is: <span class="blank-space"><span class="fragment">19</span> seconds</span> over 3G</h2>
         </section>
 
         <section>
-          If you have to send a loading indicator, you're not optimizing your images enough -- Bruce Lawson (Q&A @ SmartWeb Conf)
+          <h2>Mobile sites that loaded within 5 seconds vs 19 seconds were observed to have: <span class="blank-space"><span class="fragment">70</span>%</span> longer average sessions</h2>
         </section>
 
-        <section class="quote-slide">
+        <section>
+          <h2><span class="blank-space"><span class="fragment">53</span>%</span> of visits to mobile sites are abandoned after 3 seconds</h2>
+        </section>
+
+        <section data-background-image="img/angrycat.gif">
+        </section>
+
+        <section>
+          <h3>As of 2014, India was the <span class="blank-space">third-largest</span> online market with more than 198 million internet users, <mark>ranked only behind China and the United States</mark></h3>
+          <small class="source"><a href="https://www.statista.com/topics/2157/internet-usage-in-india/">statista.com</a></small>
+        </section>
+
+        <section>
+          <h3>Number of internet users in India from 2014 to 2021 (in millions)</h3>
+          <img src="img/indiausage.jpg" alt="">
+        </section>
+
+        <section>
+          <img src="img/avgspeed-header.jpg" alt="">
+          <img src="img/avgspeed-usa.jpg" alt="">
+          <img class="fragment" src="img/avgspeed-aus.jpg" alt="">
+          <img class="fragment" src="img/avgspeed-india.jpg" alt="">
+          <small class="source"><a href="https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds">Wikipedia</a></small>
+        </section>
+
+       <section class="quote-slide">
           <blockquote>
             "You can have anything you want in the world — once you help everyone around you get what they want."
             <footer>&mdash; Bob Ross</footer>
           </blockquote>
         </section>
 
+        <section>
+          <h2>Http Archive Data</h2>
+          <img src="img/avg-bytes-illi.svg" alt="">
+          <aside class="notes" data-markdown>
+            - Sept 15, 2016 run
+            - biggest asset by far is images
+          </aside>
+        </section>
+
+        <section>
+          <h1>64% Images</h1>
+        </section>
+
+        <section>
+          <h1>The average single JPG is <span class="blank-space">2.3x bigger</span> than the average JavaScript file</h1>
+          <aside class="notes" data-markdown>
+            So while we're arguing about including jQuery or not, remove one image request and have all the jQuery you want
+          </aside>
+        </section>
+
         <!-- Section Two: Image Types - Understanding your Canvas -->
+
+        <section data-background-image="img/blank-canvas.jpg">
+          <h1 class="blank-space" >Understanding Your Canvas</h1>
+        </section>
+
+        <section>
+          <ul style="column-count: 2; column-gap: 2em; column-count: 2; width: 120%; margin-left: -10%; margin-top: -3%; font-size: .95em">
+            <li><strong>ANI</strong>: Windows animated cursor file format</li>
+            <li><strong>BMP</strong>: Bitmap graphic files for Windows and OS/2</li>
+            <li><strong>CAL</strong>: Windows calendar files</li>
+            <li><strong>FAX</strong>: GFI fax image file</li>
+            <li><strong>GIF</strong>: CompuServe Graphics Interchange File</li>
+            <li><strong>IMG</strong>: Graphical Environment Manager (GEM) Image file</li>
+            <li><strong>JBG</strong>: (JBIG) Joint Bi-level Image experts Group file</li>
+            <li><strong>JPE</strong>: JPEG/JIFF Image file</li>
+            <li><strong>JPEG</strong>: JPEG bitmap graphic file</li>
+            <li><strong>JPG</strong>: JPEG/JIFF Image file</li>
+            <li><strong>MAC</strong>: MacPaint image file</li>
+            <li><strong>PBM</strong>: Portable BitMap image file</li>
+            <li><strong>PCD</strong>: Kodak Photo-CD image file</li>
+            <li><strong>PCX</strong>: RLE compressed ZSoft PC paintbrush bitmap file</li>
+            <li><strong>PCT</strong>: MacIntosh PICT image file</li>
+            <li><strong>PGM</strong>: Portable Greymap file</li>
+            <li><strong>PNG</strong>: Portable Network Graphics bitmap graphic file</li>
+            <li><strong>PPM</strong>: Portable Pixmap file</li>
+            <li><strong>PSD</strong>: Adobe Photoshop bitmap file</li>
+            <li><strong>RAS</strong>: Sun Raster image file</li>
+            <li><strong>TGA</strong>: Targa bitmap</li>
+            <li><strong>TIFF</strong>: Tag Image File Format bitmap file</li>
+            <li><strong>WMF</strong>: Windows Meta File</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            - so many image formats (this is 23 out of over 70)
+            - every platform uses a different format inherently
+          </aside>
+        </section>
+
+        <section>
+          <h1 style="font-size: 2em">🌲🌳🌴</h1>
+          <aside class="notes" data-markdown>
+            - emoji alone: sbix (extended bmp) on mac, bmp on Android, colr (layered vector) on Win.
+            - now lets take a look at some of my own artwork, my happy little tree
+          </aside>
+        </section>
+
+        <section>
+          <h2>Happy? Little Trees</h2>
+          <div class="section--fourth"><img src="img/tree-01.gif" alt=""><p>gif<br>9 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-01.png" alt=""><p>png<br>19 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-01.jpg" alt=""><p>jpeg<br>41 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-01.svg" alt=""><p>svg<br>7 kB</p></div>
+          <aside class="notes" data-markdown>
+            - different images are better suited to different format Types
+            - why? bc these different format types compress & store image data differently
+            - each has pros/cons & its important to understand these
+          </aside>
+        </section>
+
+        <section>
+          <h2>Happy? Little Trees</h2>
+          <div class="section--fourth"><img src="img/tree-02.gif" alt=""><p>gif<br>109 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-02.png" alt=""><p>png<br>308 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-02.jpg" alt=""><p>jpeg<br>103 kB</p></div>
+          <div class="section--fourth"><img src="img/tree-02.svg" alt=""><p>svg<br>138 kB</p></div>
+          <aside class="notes" data-markdown>
+            - jpg wins here
+            - lets briefly talk about these image formats and then introduce some new ones
+          </aside>
+        </section>
+
+        <section>
+          <ul>
+            <li><h2>GIF</h2></li>
+            <li class="fragment"><h2>PNG</h2></li>
+            <li class="fragment"><h2>JPG</h2></li>
+            <li class="fragment"><h2>WEBP</h2></li>
+            <li class="fragment"><h2>BPG</h2></li>
+            <li class="fragment"><h2>FLIF</h2></li>
+          </ul>
+        </section>
+
+<!--
+        <section>
+          <h1>
+            BMP
+          </h1>
+          <ul>
+            <li>No image compression</li>
+            <li>Pixel-dependant</li>
+            <li>Native file format on Windows</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            - It all started with the XBM format (literally valid C source code)
+            - BMP was a huge improvement</aside>
+        </section>-->
+
+        <section>
+          <div class="section--half">
+            <h1>GIF</h1>
+            <ul>
+              <li class="fragment">8-bit (256 Colors)</li>
+              <li class="fragment">Dithering Control<br> (32, 64, 128)</li>
+            </ul>
+          </div>
+          <div class="section--half">
+            <img src="img/gifgif.gif" alt="">
+            </ul>
+          </div>
+          
+            <aside class="notes" data-markdown>
+              - GIF: 256 colors in addition to the raw image data stored and displayed at any time
+              - Doesn't support transparency but allows for dithering
+              - Dithering: Adding noise to reduce distortion
+            </aside>
+        </section>
+
+        <section>
+          <h1>Gif Dithering</h1>
+          <img src="img/gifdither.gif" alt="">
+        </section>
+
+        <section data-background-image="img/dither-noise.jpg">
+        <aside class="notes">different types of dithering also affect image size -- noise dither</aside>
+        </section>
+
+        <section data-background-image="img/dither-pattern.jpg">
+        <aside class="notes">pattern dither is a little bit smaller</aside>
+        </section>
+
+        <section data-background-color="RGB(144, 86, 69)">
+          <img src="img/crosstitch.jpg" alt="">
+          <aside class="notes">also pattern dither kind of reminds me of cross-stitching</aside>
+        </section>
+
+        <section>
+          <div class="section--half">
+            <h1>GIF</h1>
+            <ul>
+              <li>8-bit (256 Colors)</li>
+              <li>Dithering Control<br> (32, 64, 128)</li>
+            </ul>
+          </div>
+          <div class="section--half">
+            <h1>PNG <span class="fragment">💁</span></h1>
+            <ul>
+              <li class="fragment">PNG-8 (256 Colors)</li>
+              <li class="fragment">PNG-24 (True Color)</li>
+              <li class="fragment">Alpha Transparency</li>
+              <li class="fragment">Delta Encoding</li>
+            </ul>
+          </div>
+          
+            <aside class="notes" data-markdown>
+              - PNG = open source reaction to the gif threatening to lisence
+              - True Color means 16 million colors
+              - bc of the better compression, an 8-bit png is generally always better than a comparable gif
+            </aside>
+        </section>
+
+        <!--<section>
+          <img src="img/color-depth.bmp" alt="">
+        </section>
+
+        <section data-background-image="img/4501597-scenery-wallpaper.jpg">
+          <h3 class="blank-space">True Color: 24-bit<br>16,777,216 variations </h3>
+          <h3 class="blank-space fragment">Deep Color: 32-bit<br>68,719,476,736 variations</h3>
+          <aside class="notes" data-markdown>
+            - PS3 supports deep color, seeing it in most modern systems (Windows 7+)
+            - you prob wont notice a difference and your video card needs to support it
+            - most people can't tell the difference bw 16-bit and 32-bit color
+            - higher color depth requires more system resources 
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/4k.jpg" alt="">
+        </section>
+
+        <section>
+          <img src="img/postadsuk.com-4-lg-49-inch-smart-4k-ultra-hd-led-tv-49uf770v-built-in-wifi-freeview-hd-web-os-2-0-software-tv-dvd-.JPG" alt="">
+          <aside class="notes" data-markdown>
+            - This Could be Where the Web is going
+            - Or even further into WebVR
+            - Because screens are changing, so we need to be thinking about the next form of "responsive"
+          </aside>
+        </section>
+
+         <section data-background-image="img/labcolor.jpg">
+          <aside class="notes" data-markdown>
+           - Deep color might not make a difference now to our eyes, but as screens get better, colors are improving
+           - CSS Color Level 4 LAB & LCH (lightness, chroma, hue-angle)
+           - LAB & LCH will allow for better color correction among different monitor screens
+           - color gammut media queries (like dcppi3)
+          </aside>
+        </section>-->
+
+				<section data-background-color="RGB(0, 255, 210)">
+          <h1>Lossless v. Lossy</h1>
+          <aside class="notes" data-markdown>
+            - PNG is an example of lossless compression, it doesn't lose quality.
+            - PNG uses delta compression
+            - difference of one pixel to another (bc most images have large areas of similar color)
+            - chooses the pixel closest in value (hoping to be 0) which decreases overall file size
+            - jpg also looks at difference of one pixel to another and discards the excess (it rounds where it can)
+            - everytime you resave a jpg, even at 100% quality, it will lose detail
+          </aside>
+				</section>
+
+        <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
+          <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
+          <div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
+          <!--<img src="img/screenshot-comparison.jpg" alt="">-->
+        </section>
+
+        <section>
+          <img style="width: 100%" src="img/jpegcompression.jpg" alt="">
+          <aside class="notes" data-markdown>
+            - jpg is really smart, it goes through a several-step process for compression
+            - what quality level / compression level determins the quantization table used
+            - convert to a new, compressed value
+            - saves space on the server
+            - lossy isn't a bad thing
+          </aside>
+        </section>
+
+        <section>
+          <div class="section--third">
+            <img src="img/mountain--blur.jpg" alt="">
+            <img src="img/histogram-100.jpg" alt="">
+            <h2>100%<br><span style="color:#d69">264 KB</h2>
+          </div>
+          <div class="section--third">
+            <img src="img/mountain--blur--optimized-60.jpg" alt="">
+            <img src="img/histogram-60.jpg" alt="">
+            <h2>60%<br><span style="color:#d69">199 KB</h2>
+          </div>
+          <div class="section--third">
+            <img src="img/mountain--blur--optimized-10.jpg" alt="">
+            <img src="img/histogram-10.jpg" alt="">
+            <h2>10%<br><span style="color:#d69">56 KB</h2>
+          </div>
+          <aside class="notes" data-markdown>
+            - histograms: fewer colors on lower qualities
+            - spikes still stand out, but the general area in that graph is decreased as
+            - "in between colors" are removed
+            - at a smaller size you can't really see a difference (but it makes a big differnce in image size)</aside>
+        </section>
+
+        <section>
+          <div class="section--half"><img src="img/mountain-high-quality.jpg" alt=""><h2>100%<br><span style="color:#d69">264 KB</h2></div>
+          <div class="section--half"><img src="img/mountain-low-quality.jpg" alt=""><h2>10%<br><span style="color:#d69">56 KB</h2></div>
+          <aside class="notes">
+            - here is what that banding and distortion looks like up close
+            - the quality you save it as affects how much rounding the pixels will do merging with the pixels surrounding them
+          </aside>
+        </section>
+
+        <section>
+          <img style="width:80%" src="img/mountain--blur-optimized-80.jpg" alt="">
+          <h2>80% quality</h2>
+          <aside class="notes" data-markdown>80 is probably a good medium for you</aside>
+        </section>
+
+         <section>
+           <div class="section--half">
+            <h1>JPEG 2000</h1>
+              <ul>
+                <li>Multiple resolution representation</li>
+                <li>Lossy or lossless</li>
+                <li>Supports any bit depth, (i.e 16- and 32-bit floating point)</li>
+              </ul>
+           </div>
+           <div class="section--half">
+              <h1>JPEG XR</h1>
+            <ul>
+              <li>Lossy or lossless</li>
+              <li>Tile region and metadata support</li>
+              <li>16-bit per component (64-bit per pixel) CMYK color model</li>
+              <li>Alpha channel support</li>
+            </ul>
+           </div>
+            <a href="https://en.wikipedia.org/wiki/JPEG_2000" class="source">Wikipedia</a>
+            <aside class="notes" data-markdown>
+              - I heard these names popping up a lot as improvements on JPEG
+              - Problem is: nobody can really agree on a better implementation than we currently have
+            </aside>
+         </section>
+
+         <section>
+          <h3>According to jpeg.org:</h3>
+          <ul>
+            <li class="fragment">JPEG</li>
+            <li class="fragment">JPEG XT</li>
+            <li class="fragment">JPEG-LS</li>
+            <li class="fragment">JPEG 2000</li>
+            <li class="fragment">JPEG XR</li>
+            <li class="fragment">JBIG</li>
+            <li class="fragment">JPEG XS</li>
+          </ul>
+          <aside class="notes" data-markdown>
+            - so while people are complaining there are too many JS frameworks...
+          </aside>
+        </section>
+
+				<section>
+          <h1>JPEG 2000</h1>
+          <img src="img/caniuse--jpeg2000.jpg" alt="">
+        </section>
+
+        <section>
+          <h1>JPEG XR</h1>
+          <img src="img/caniuse--jpegxr.jpg" alt="">
+        </section>
+
+        <section>
+          <h1 style="color: #9f50ad" >IE/Edge: JPEG XR</span></h1>
+          <h1 style="color: #5d5d94" class="fragment" >Safari: JPEG 2000</span></h1>
+          <h1 style="color: #434852" class="fragment" >Chrome: WEBP</span></h1>
+        </section>
+
+        <section data-background-image="img/js2016.png">
+          <h1 class="blank-space">Welcome to the web in 2016 ✨</h1>
+          <aside class="notes" data-markdown>
+            And Chrome is just done with JPEG. What's wrong with JPG? Nothing. It's brilliant. But It's old. And we can do better. But again, this is the web, its 2016
+          </aside>
+        </section>
+
+        <section>
+          <h1>WebP</h1>
+            <ul>
+              <li>Lossy or Lossless</li>
+              <li>Animated format support</li>
+              <li>Better compression algorithm than JPG</li>
+            </ul>
+            <aside class="notes" data-markdown>
+              - most promising new image format
+              - Developed Initially On2
+              - Google Initiative now -- put a lot of work into this since 2010
+              - lossy WebP also supports transparency, making it comparable & faster than png
+            </aside>
+        </section>
+
+        <section>
+          <div class="section--half"><img src="img/1-mountainscape-Bob-Ross.jpg" alt=""><p>JPG 168 KB</p></div>
+          <div class="section--half"><img src="img/1-mountainscape-Bob-Ross.webp" alt=""><p>WEBP 141 KB</p></div>
+          <aside class="notes" data-markdown>
+            - this example is lossless compression
+            - Avg of 30% savings in lossless -- not bad
+            - How WebP Works: Predictive coding
+            - Predictive coding uses the values in neighboring blocks of pixels to predict the values in a block, and then encodes only the difference
+          </aside>
+        </section>
+
+        <section>
+          <img style="width: 70%" src="img/webp-histo.png" alt="">
+          <img class="fragment" style="position: absolute;
+    width: 400px;
+    top: 60px;
+    left: 60px;" src="img/histogram-60.jpg" alt="">
+        <aside class="notes">
+          - even compared to 60% quality JPG histogram, you can see how this compresses differently
+        </aside>
+        </section>
+
+        <section>
+          <h1>WebP</h1>
+          <img src="img/caniuse--webp.jpg" alt="">
+          <aside class="notes" data-markdown>
+            support isnt super strong, but Safari and Firefox are both experimenting with it right now, so thats a really big sign
+          </aside>
+        </section>
+
+        <section>
+          <h2>Converting to WebP</h2>
+        </section>
+
+        <section>
+          <table style="font-size: .37em">
+<thead>
+<tr>
+<th>Name</th>
+<th>Platform</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://picasa.google.com/" target="_blank">Picasa</a></td>
+<td>Windows, Mac</td>
+<td>You probably know Google's Image Management Suite, and you probably guessed that it supports WEBP conversion.</td>
+</tr>
+<tr>
+<td><a href="http://www.imagemagick.org/script/index.php" target="_blank">ImageMagick</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>Comes in command line form but there are several GUI front ends that are available.</td>
+</tr>
+<tr>
+<td><a href="http://www.xnview.com/en/xnconvert/" target="_blank">XnConvert</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>My free Converter of choice; simple, multiplatform, and a delight to use</td>
+</tr>
+<tr>
+<td><a href="http://www.xnview.com/en/index.php" target="_blank">XNView</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>One of the world's best freeware image viewing programs, supports WEBP, can do conversions.</td>
+</tr>
+<tr>
+<td><a href="http://www.xnview.com/en/nconvert/" target="_blank">NConvert</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>Command line utility from the makers of XNConvert and XNView.</td>
+</tr>
+<tr>
+<td><a href="http://www.fastpictureviewer.com/" target="_blank">FastPictureViewer</a></td>
+<td>Windows</td>
+<td>An image viewer that can open WEBP if you install the aforementioned WEBP codec, and supports saving images into other formats. Note that the 'standard' version is free; simply let the PRO version expire and it will revert to the free version.</td>
+</tr>
+<tr>
+<td><a href="http://www.irfanview.com/" target="_blank">IrfanView</a></td>
+<td>Windows</td>
+<td>This extremely well known and versatile freeware image viewer for Windows supports viewing and converting WEBP.</td>
+</tr>
+<tr>
+<td><a href="http://www.gimp.org/" target="_blank">GIMP</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>The world's most well known free/open source bitmap editor and Photoshop alternative, supports and can convert WEBP</td>
+</tr>
+<tr>
+<td><a href="http://www.getpaint.net/index.html" target="_blank">Paint.NET</a></td>
+<td>Windows, Mac, Linux, Others</td>
+<td>The world's SECOND most well known free/open source bitmap editor and Photoshop alternative, supports and can convert WEBP (although you may need to install <a href="http://forums.getpaint.net/index.php?/topic/21773-webp-filetype-2013-04-06/" target="_blank">this plugin</a>).</td>
+</tr>
+<tr>
+<td><a href="http://www.rw-designer.com/image-editor" target="_blank">RWPaint</a></td>
+<td>Windows</td>
+<td>Despite the heavy hitter free Photoshop alternatives above, this program is my favorite&nbsp;bitmap editor and the one I use. Supports and can convert WEBP</td>
+</tr>
+<tr>
+<td><a href="https://developers.google.com/speed/webp/download" target="_blank">WebP Utility</a></td>
+<td>Windows</td>
+<td>A small program from Google that can do WEBP conversion from the command line.</td>
+</tr>
+<tr>
+<td><a href="https://cloudconvert.org/" target="_blank">Cloudconvert.org</a></td>
+<td>Online</td>
+<td>Online conversion service, can convert WEBP.</td>
+</tr>
+<tr>
+<td><a href="http://image.online-convert.com/" target="_blank">Online-convert.com</a></td>
+<td>Online</td>
+<td>Online conversion service, can convert WEBP.</td>
+</tr>
+<tr>
+<td><a href="http://www.zamzar.com/convert/webp-to-jpg/" target="_blank">Zamzar.com</a></td>
+<td>Online</td>
+<td>Online conversion service, can convert WEBP.</td>
+</tr>
+</tbody>
+</table>
+<small class="source" style="margin-top:-1em"><a href="http://www.freewaregenius.com/convert-webp-image-format-jpg-png-format/">Source</a></small>
+<aside class="notes" data-markdown> 
+            - There is a webp image format PS plugin
+            - I personally like the ImageMagick CLI tool bc its super fast
+          </aside>
+        </section>
+
+        <section>
+          <ol>
+            <li>Install <a href="http://brew.sh/index.html">Homebrew</a></li>
+            <li><code>brew install imagemagick</code></li>
+            <li><code>brew install webp</code></li>
+          </ol>
+        </section>
+
+        <section>
+          <code>mogrify -format webp *.jpg</code>
+        </section>
+
+        <section>
+          <h2>WebP Polyfill: 67kb</h2>
+          <code style="font-size: .43em">< script type="text/javascript" src="https://cdn.jsdelivr.net/webpjs/0.0.2/webpjs-0.0.2.min.js"></script></code>
+          <aside class="notes" data-markdown>
+            - its called WebP.js
+            - IE6+
+            - if your total savings > 67kb, this may be worth it
+            - study done by Adrian James + Matt Shull in a post for smashing magazine determined this to be found this to be the most lightweight solution that works in all browsers
+          </aside>
+        </section>
+
+        <section>
+          picture element for webp
+          <aside class="notes">
+            however, it may be kind of weird to reqiure JS for your Firefox or Safari users to see your images
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/caniuse--picture.jpg" alt="">
+        </section>
+
+        <section>
+          <aside class="notes">
+            - Picturefill Polyfill
+          </aside>
+        </section>
+
+        <section>
+          <h2>WebM</h2>
+          <img src="img/chanelsite.jpg" alt="">
+          <aside class="notes" data-markdown>
+            - Developed Initially On2, Xiph, and Matroska; later Google
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/caniuse--webm.jpg" alt="">
+        </section>
+        
+        <section data-background-image="img/webmconvert.jpg">
+          <!--<img src="img/webmconvert.jpg" alt="">-->
+        </section>
+        
+        <section>
+          <div class="section--half"><video autoplay controls loop src="img/chanel.mp4" alt=""></video><p>mp4: 3.5 MB</p></div>
+          <div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
+        </section>
+
+        <section>
+          <pre><code>&lt;video&gt;
+  &lt;source src="src/video.mp4" 
+          type='video.mp4; codecs="avc1.42E01E, mp4a.40.2"' /&gt;
+  &lt;source src="src/video.webm" 
+          type='video.webm; codecs="vp8, vorbis"' /&gt;
+&lt;/video&gt;</code></pre>
+           <aside class="notes" data-markdown>you don't need a polyfill, can just send it as one of the video options</aside>
+        </section>
+
+        <section>
+          <h1>More Options, <br>More Power</h1>
+        </section>
+
+        <section data-background-color="RGB(0, 255, 210)">
+          <h1>Experimental Formats</h1>
+          <aside class="notes">
+            - these are really promising future formats that may very well be the future of image types
+          </aside>
+        </section>
+
+        <section data-background-image="img/explosion.gif">
+          <aside class="notes">gif pattern diffusion!</aside>
+        </section>
+
+        <section data-background-video="img/bpgmov.mov">
+          <h1 class="blank-space">BPG <small style="vertical-align: middle">(Better Portable Graphics)</small></h1>
+          <p class="fragment blank-space">Tests on photographic images in July 2014 found that BPG produced smaller files for a given quality than JPEG, JPEG XR and WebP</p>
+          <aside class="notes" data-markdown>
+            - came out in 2014 and seemed really promising at first
+            - purpose is to replace JPEG
+            - High compression ratio. Files are much smaller than JPEG for similar quality
+            -  based on the intra-frame encoding of the High Efficiency Video Coding (HEVC) video compression standard
+            - alpha channel also supported
+            - "There appear to be no plans to support this in any browser" <-- so not even on caniuse
+          </aside>
+        </section>
+
+        <section>
+          <h2>Using BPG</h2>
+            <ul>
+              <li>Encoding: <a href="https://webencoder.libbpg.org/">BPG Web Encoder</a></li>
+              <li>Decoding (<a href="https://github.com/flaki/bpg2jpg">Polyfill</a>): BGP to JPEG converter (56 KB)</li>
+            </ul>
+          
+        </section>
+
+        <section>
+          <h1>Free Lossless Image Format (FLIF)</h1>
+          <aside class="notes" data-markdown>
+            The Newest kid on the block: FLIF
+            http://cloudinary.com/blog/flif_the_new_lossless_image_format_that_outperforms_png_webp_and_bpg
+          </aside>
+        </section>
+
+        <section>
+          <div class="section--half">
+            <img src="img/flif.png" alt="">
+            <br><br>
+            <h2>Free Lossless Image Format</h2>
+          </div>
+          <div class="section--half">
+            <ul style="font-size: .8em; line-height: 1.6">
+              <li><strong>14%</strong> smaller than lossless WebP</li>
+              <li class="fragment"><strong>22%</strong> smaller than lossless BPG</li>
+              <li class="fragment"><strong>33%</strong> smaller than brute-force crushed PNG files</li>
+              <li class="fragment"><strong>43%</strong> smaller than typical PNG files</li>
+              <li class="fragment"><strong>46%</strong> smaller than optimized Adam7-interlaced PNG files</li>
+              <li class="fragment"><strong>53%</strong> smaller than lossless JPEG 2000 compression</li>
+              <li class="fragment"><strong>74%</strong> smaller than lossless JPEG XR compression</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <img style="width: 70%" src="img/flifcomparison.png" alt="">
+        </section>
+
+        <section>
+          <h3>Responsive Images</h3>
+          <img style="width: 85%" src="img/flif-responsive.jpg" alt="">
+          <aside class="notes" data-markdown>
+            - A FLIF image can be loaded in different ‘variations’ from the same source file
+            - browser can start downloading the beginning of that file immediately, even before it knows exactly how much detail will be needed, then make adjustments
+          </aside>
+        </section>
+
+        <section>
+          <h2><a href="https://github.com/UprootLabs/poly-flif">Polyfill</a> status: "Beta. Not tested on all browsers. Performance and size is still being optimised."</h2>
+        </section>
 
         <section class="quote-slide">
           <blockquote>
@@ -87,150 +812,76 @@
             <footer>&mdash; Bob Ross</footer>
           </blockquote>
           <aside class="notes" data-markdown>
-            - we must first understand the canvas
-            - we must first understand the paints
-            - we must first understand the pixels
+            - thats so many things, but this is 2016 in the dev world
+            - and I think its a great thing bc the best will win
+            - but lets talk about what we should definitely be doing now
           </aside>
-        </section>
-
-        <section>
-          This field is a complicated landscape
-          -- landscape background --
-					--> vocabular section appears on top of it
-        </section>
-
-
-        <section>
-          Basic image formats (gif, png, jpg, svg)
-        </section>
-
-        <section data-markdown>
-          <h2>Lossy v. Lossless</h2>
-
-          | lossy | lossless |
-          |--- |--- |
-          |jpg, webp | png, svg, webp ____|
-
-          <aside class="notes">
-            - every time you save a jpg image it loses quality, no matter what <-- this is good for images with a lot of data, the jpg will try to do a bit of optimization and compression each time
-            - when you save photos using PNG, the generated files are huge, compared to lossy formats such as JPEG
-          </aside>
-        </section>
-
-        <section>
-          When to use various formats
-        </section>
-
-				<section>
-					JPG * Lossy v. Lossless
-				</section>
-
-				<section>
-					Progressive JPG vs Baseline (pros and cons)
-				</section>
-
-				<section>
-          <h1>JPEG 2000</h1>
-          <ul id="caniuse--result-list" data-propName="jpeg2000" data-browsers="ie edge safari firefox chrome"></ul>
-        </section>
-
-				<section>
-          <h1>JPEG XR</h1>
-          <ul id="caniuse--result-list" data-propName="jpegxr" data-browsers="ie edge safari firefox chrome"></ul>
-        </section>
-
-        <section>
-          The new kid on the block: WebP
-          https://developers.google.com/speed/webp/
-        </section>
-
-        <section>
-          How WebP Works: Predictive coding
-          - both lossy and lossless variants
-          <aside class="notes">
-            Predictive coding uses the values in neighboring blocks of pixels to predict the values in a block, and then encodes only the difference
-          </aside>
-        </section>
-
-        <section>
-          image time
-          WebP Lossless: https://developers.google.com/speed/webp/docs/webp_lossless_alpha_study#results
-          WebP Lossy: https://developers.google.com/speed/webp/docs/webp_study
-          <aside class="notes">
-            - lossy WebP also supports transparency, making it comparable & faster than png
-          </aside>
-        </section>
-
-        <section>
-          <h1>WebP</h1>
-          <ul id="caniuse--result-list" data-propName="webp" data-browsers="ie edge safari firefox chrome"></ul>
-        </section>
-
-        <section>
-          converting to WebP (ie. how to use it): https://developers.google.com/speed/webp/docs/precompiled
-        </section>
-
-        <section>
-          BPG file format
-          <aside class="notes">
-            - The newer kid on the block
-          </aside>
-        </section>
-
-        <section>
-          <h1>Free Lossless Image Format (FLIF)</h1>
-          <aside class="notes">
-            The Newest kid on the block: FLIF
-            http://cloudinary.com/blog/flif_the_new_lossless_image_format_that_outperforms_png_webp_and_bpg
-          </aside>
-        </section>
-
-        <section>
-          -- image from the site above here comparing file formats --
-        </section>
-
-        <section>
-          <h1>FLIF</h1>
-          <ul id="caniuse--result-list" data-propName="flif" data-browsers="ie edge safari firefox chrome"></ul>
-        </section>
-
-        <section>
-          Animation:
-            - animated png vs gif vs animated flif vs animated bpg vs mng
-        </section>
-
-				<section>
-          <h1>APNG</h1>
-          <ul id="caniuse--result-list" data-propName="apng" data-browsers="ie edge safari firefox chrome"></ul>
         </section>
 
         <!-- Section Three: Automatic Image Optimization -->
+
+        <section data-background-color="RGB(88, 60, 160)">
+          <h1>Solutions and Protips</h1>
+        </section>
 
 				<section>
 					<img src="img/automation.svg" alt="">
 				</section>
 
         <section>
-          ImageMagick & color spaces
-          http://www.imagemagick.org/script/formats.php
+            <img src="img/Imagemagick-logo.png" alt="ImageMagick">
         </section>
 
         <section>
-          setting up a gulp task to run imageoptim
+          <h1>ImageMagick</h1>
+            <ul>
+              <li>Webpack: <a href="https://www.npmjs.com/package/magick-loader">magick-loader</a></li>
+              <li class="fragment">Gulp: <a href="https://www.npmjs.com/package/gulp-gm">gulp-gm</a></li>
+              <li class="fragment">Grunt: <a href="https://www.npmjs.com/package/grunt-imagemagick">grunt-imagemagick</a></li>
+              <li class="fragment">NPM Scripts: <a href="https://github.com/elad/node-imagemagick-native">node-imagemagick</a></li>
+            </ul>
+        </section>
+
+        <section>
+          <h1><a href="https://github.com/elad/node-imagemagick-native">node-imagemagick</a></h1>
+            <pre><code>fs.writeFileSync('after.png', imagemagick.convert({
+    srcData: fs.readFileSync('before.jpg'),
+    format: 'PNG',
+    quality: 100 // (best) to 1 (worst)
+}));</code></pre>
         </section>
 
         <!-- Section Four: Semi-Automatic Image Optimization -->
 
 				<section>
 					<img src="img/semiautomation.svg" alt="">
+          <aside class="notes">this section is all about tools -- 3 tools to be exact</aside>
 				</section>
 
         <section>
-          ImageAlpha
+          <h2>ImageAlpha</h2>
+          <img src="img/imagealpha-1024x734.png" alt="">
         </section>
 
         <section>
-          ImageOptim
+          <h2>ImageOptim</h2>
+          <img src="img/imageoptim.png" alt="">
+          <aside class="notes" data-markdown>
+            -use in concert with imagealpha
+          </aside>
+        </section>
+
+        <section>
+          <h1>ImageOptim Always and Often.</h1>
+          <h2 class="fragment">IOAO</h2>
+          <aside class="notes">
+            - yarn PR
+            - personal blog saved 9 MB the first time I ran assets through
+          </aside>
+        </section>
+
+        <section data-background-image="img/mixinsvgo.jpg">
+        <h1 class="blank-space fragment"><a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a></h1>
         </section>
 
         <!-- Section Five: Manual Image Optimization -->
@@ -244,7 +895,6 @@
           <aside class="notes" data-markdown>
             - okay so lets design a website!
             - this yellow area is a huge buzzkill to your page performance
-            - this section is about those large, heavy, primary elements
           </aside>
         </section>
 
@@ -252,57 +902,532 @@
           <h2>Spot the Difference!</h2>
           <div class="section--half">
             <img src="img/mountain--original.jpg" alt="">
-            <h3>409kb</h3>
+            <h3>409 KB</h3>
           </div>
-          <div class="section--half difference can-overlap">
+          <div class="section--half difference fragment highlight-red can-overlap">
             <img src="img/mountain--blur.jpg" alt="">
-            <h3>264kb</h3>
+            <h3>264 KB</h3>
+          </div>
+          <aside class="notes" data-markdown>
+            - continue our game
+            - both of these are the exact same 
+          </aside>
+        </section>
+
+        <section>
+          <video controls autoplay loop src="img/mediumloading.mp4"></video>
+          <aside class="notes">
+            Medium renders images and includes them as placeholders to show the overview until it loads, then animates it in
+          </aside>
+        </section>
+
+        <style>
+          .blurred-img {
+            width: 110%;
+            max-width: 110% !important;
+            margin: -5% !important;
+            filter: blur(10px);
+          }
+        </style>
+        <section>
+          <div class="section--third">
+            <img src="img/mountain--original.jpg" alt="">
+            <h3>409 KB</h3>
+          </div>
+          <div class="section--third fragment">
+            <img style="margin: 105px" src="img/mountain--original--tiny.jpg" alt="">
+            <h3>0.533 KB</h3>
+          </div>
+          <div class="section--third fragment">
+            <div style="overflow: hidden">
+            <img class="blurred-img" src="img/mountain--original--tiny.jpg" alt="">
+            </div>
+            <h3>0.533 KB</h3>
+          </div>
+          <aside class="notes">
+            save the image at 30px, saves a ton of data, then scale it up to its container and use a CSS filter (blur)
+          </aside>
+        </section>
+
+        <section data-transition="fade">
+          <div style="overflow: hidden">
+            <img class="blurred-img" src="img/mountain--original--tiny.jpg" alt="">
+          </div>
+          <aside class="notes">then you can animate it in when it finishes loading, also great for percieved performance</aside>
+        </section>
+        </section>
+
+        <section data-transition="fade">
+          <div style="overflow: hidden">
+            <img style="width: 110%;
+            max-width: 110% !important;
+            margin: -5% !important;" src="img/mountain--original.jpg" alt="">
           </div>
         </section>
 
         <section>
-          <h1>Protip: Blur is your Friend</h1>
+          <h2>Facebook Headers: 200 bytes</h2>
+          <img src="img/coverphoto.jpg" alt="">
+          <small class="source"><a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/">Source</a></small>
+          <aside class="notes">
+            - bc of how FB gets image data from their GraphQL databases, if they send a file < 200 bytes, than can avoid an extra image request
+            - so they use this technique as well, saving time and data
+          </aside>
         </section>
 
         <section>
-          DO Example
+					<div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
+					<div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
+          <a href="#" class="source">Codinghorror Blog</a>
+          <aside class="notes">
+            - if you've heard of progressive JPGs, you kind of get this for free with those
+            - explain progressive JPGs
+            - also improve percieved performance but won't be nearly as fast to initially render as this technique, bc theyre still relatively big
+          </aside>
+				</section>
+
+        <section data-background-image="img/progressive.jpg">
+          <aside class="notes">
+            can run a PS task for this change
+          </aside>
+        </section>
+
+        <section data-background-image="img/bg1.jpg">
+          <h1 class="blank-space">Protip: Embrace Blur</h1>
         </section>
 
         <section>
-          Photoshop Save for Web -- color spaces and options
+          <div class="section--half"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
+          <div class="section--half"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
         </section>
 
-        <!-- Section Six: Conclusion -->
+        <section>
+          <style>
+            .blender {
+              position: relative;
+              width: 520px;
+              margin: 0 auto !important;
+            }
+            .blender img {
+              max-width: 100%;
+              cursor: pointer;
+            }
+            .blender::after {
+              content: 'mix-blend-mode: hard-light';
+              position: absolute;
+              top: 0; left: 0;
+              width: 520px;
+              height: 98%;
+              background-color: #d69;
+              mix-blend-mode: hard-light;
+              transition-duration: 1s;
+            }
+            .blender.current-fragment::after {
+              left: 80%;
+            }
+          </style>
+            <div class="blender fragment highlight-green"><img src="img/test-bw.jpeg" alt=""></div>
+            <aside class="notes">
+              - B&W saves us a lot in image size, but it doesn't have to be boring! Hello Blend Modes!
+            </aside>
+        </section>
 
         <section>
-          Tips:
-          	- never send an image larger than its biggest containing box
-						- always be optimizing
-						- small improvements are improvements
-						- educate the entire team
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
+          <style>
+            figure:before, figure:after { height: 97% !important}
+          </style>
+            <h2><a href="http://una.im/CSSgram">una.im/CSSgram</a></h2>
+            <div class="section--third"><figure class="toaster"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Toaster</h3></div>
+            <div class="section--third"><figure class="brannan"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Brannan</h3></div>
+            <div class="section--third"><figure class="walden"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Walden</h3></div>
+          <aside class="notes" data-markdown>
+            - Blend modes will take some additional time to repaint the page
+            - lets benchmark what the impact of that additional paint is in comparison to the image savings we're getting
+          </aside>
+        </section>
+
+        <section data-background-image="img/comparisonload.jpg">
+          <!--<img src="img/comparisonload.jpg" alt="">-->
+        </section>
+
+        <section>
+          <img style="width:120%; margin-left:-10%; max-width: 120%" src="img/comparisons.jpg" alt="">
+        </section>
+
+        <section>
+          <div class="section--third"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
+          <div class="section--third"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
+          <div class="section--third"><img src="img/test-colored.jpg" alt=""><h2>845 KB</h2></div>
+          <aside class="notes">
+            - images alone -- no live blend modes
+            - lets again benchmark that paint time with the image savings (this time 115 KB not 190KB)
+          </aside>
+        </section>
+
+        <section data-background-image="img/colored-jpg.jpg">
+          <!--<img img style="width:120%; margin-left:-10%; max-width: 120%" src="img/colored-jpg.jpg" alt="">-->
+          <aside class="notes" data-markdown>
+            - Still renders faster to send a B&W image with a blend mode than an equivilant colored image pre-designed and saved in photoshop
+          </aside>
+        </section>
+
+        <section data-background-image="img/bg4.jpg">
+          <h1 class="blank-space">Protip: Less Colors, Less Problems</h1>
+        </section>
+      
+        <!--<section>
+          <h1>Compressive Images</h1>
+          <img src="img/compressive.png" alt="">
+          <small class="resource"><a href="https://www.filamentgroup.com/lab/compressive-images.html">Filament Group</a></small>
+        </section>
+
+        <section>
+          <img src="img/compressivehow.jpg" alt="">
+        </section>
+
+        <section>
+          <div class="section--half"><img src="img/bob_ross_csg024_autumn_glory.jpg" alt="">
+          <p>123 KB</p></div>
+          <div class="section--half"><img src="img/bob_ross_csg024_autumn_glory--2.jpg" alt=""
+          <p>106 KB</p></div>
+          <aside class="notes" data-markdown>
+            - CAVEAT!: All images are bitmapped when expanded, so the larger image may take up more device memory than you realize
+            - this can be a problem on mobile
+            - not a replacement for the `<picture>` element
+          </aside>
+        </section>
+
+        <section data-background-image="img/bg3.jpg">
+          <h1 class="blank-space">Protip: Try Compressive Images</h1>
+          <aside class="notes">
+            - can also experiment with 50% quality and 1.5x the size to mitigate the potential memory issues
+          </aside>
+        </section>-->
+
+        <!--<section>
+          <blockquote>
+          "If you have to send a loading indicator, you're not optimizing your images enough"
+          <footer>&mdash; Bruce Lawson (@ SmartWeb Conf)</footer>
+          </blockquote>
+        </section>-->
+
+      <!--Animation-->
+
+        <section data-background-color="RGB(138, 252, 229)">
+          <h1>Animated Images</h1>
+        </section>
+
+        <section data-background-image="img/do-site.jpg">
+          <aside class="notes" data-markdown>
+            After automatic optimizers, that gif is still > 600kb
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/create.gif" alt="">
+          <aside class="notes" data-markdown>
+            this is what we're optimizing -- I ended up getting it 200kb smaller (over 30% smaller) to get the site to load in < 1MB
+          </aside>
+        </section>
+
+        <section data-background-image="img/deleting-frames.gif">
+          <aside class="notes" data-markdown>
+            - reminded me of my Jasc Animation Shop Days
+          </aside>
+        </section>
+
+        <section data-background-image="img/bg2.jpg">
+          <h1 class="blank-space">Protip: Format the Frames</h1>
+        </section>
+
+        <section>
+          <h1>GIF Alternatives</h1>
+          <ul>
+            <li class="fragment">APNG</li>
+            <li class="fragment">FLIF</li>
+            <li class="fragment">BPG</li>
+            <li class="fragment">MNG</li>
+          </ul>
+          <aside class="notes" data-markdown>none of these have really caught on yet, but Gifs are SO big. The one thing thats most interesting to me though is called GIFV by IMGUR</aside>
+        </section>
+
+        <section>
+          <h1> GIFV by Imgur</h1>
+          <img src="img/gifv-video.jpg" alt="">
+          <small class="source"><a href="https://blog.imgur.com/2014/10/09/introducing-gifv/">GIFV Introduction</a></small>
+          <aside class="notes" data-markdown>
+            - automatically converts uploaded GIF files on the fly into the WebM or MP4 video formats, depending on browser support
+            - .gifv extensin preserved
+            - greatly decreases file size
+          </aside>
+        </section>
+
+        <section>
+          <h3>(Silent) Video Autoplay is back in iOS 10!</h3>
+          <aside class="notes">idk about you but im super excited about this</aside>
+        </section>
+
+        <section data-background-image="img/shaqhil.gif">
+        <aside class="notes" data-markdown>
+          - this is great news for gifv and autoplaying videos
+          - headers with video background components
+          - so why is video so much better than something like gif?
+        </aside>
+        </section>
+
+        <section>
+          <h1>Compression</h1>
+          <div class="section--half">
+            <h2>Intraframe (gif)</h2>
+            <img src="img/spritesheet.jpg" alt="">
+          </div>
+          <div class="section--half">
+            <h2>Interframe (vids)</h2>
+            <img src="img/framediff.png" alt="">
+          </div>
+          
+          <aside class="notes" data-markdown>
+            So why are vids so much smaller?
+            - gifs store *every* frame, so no lookups or preloading, just shows a picture
+            - videos store *differnces* between frames, like a formula, and then render it at-speed
+            - the more movement, the bigger the movie -- not the length
+          </aside>
+        </section>
+
+        <!-- Section Six: Lets Do The Thing (Mixin Example) -->
+
+        <section data-background-color="RGB(88, 60, 160)">
+          <h1>Now We Paint</h1>
+        </section>
+
+        <section data-background-image="img/mixin/mixin.jpg">
+        </section>
+
+        <section data-background-color="black">
+          <h1>Step 1: Determine GCD Image Size</h1>
+          <aside class="notes" data-markdown>GCD = Greatst Common Denominator from middle school math class</aside>
+        </section>
+
+        <section data-background-image="img/mixin/mixin.jpg">
+        </section>
+
+        <section data-background-image="img/mixin/joel-highlighted.jpg">
+        </section>
+
+        <section data-background-image="img/mixin/joel-sending.jpg">
+        </section>
+
+         <section data-background-image="img/mixin/joel-mobile-widest.jpg">
+        </section>
+
+        <section data-background-image="img/mixin/joel-mobile-sched.jpg">
+        </section>
+
+        <section data-background-image="img/mixin/final-biggest.jpg">
+        </section>
+
+        <section>
+          780 / 1560 = 50%
+          <aside class="notes" data-markdown>
+            - we could just save them all down to match that final biggest image (even though there is only just one)
+          </aside>
+        </section>
+
+        <section>
+          <div class="section--half"><img src="img/ps-batch.jpg" alt=""><a href="http://www.digitalartsonline.co.uk/tutorials/photoshop/how-resize-multiple-images-in-photoshop/">Photoshop Batch Resize</a></div>
+          <div class="section--half"><img src="img/installingimagemagick.jpg" alt=""><a href="http://www.imagemagick.org/script/command-line-tools.php">ImageMagick CLI Tools</a></div>
+        </section>
+
+        <section>
+          <code>mogrify ./ -resize 50%</code>
+          <aside class="notes" data-markdown>since we have imagemagick installed, we can use mogrify -- this is sort of lazy overall improvements</aside>
+        </section>
+
+        <section>
+          <h1>"Save Retina Images @2x the Size"</h1>
+          <aside class="notes" data-markdown>
+            - advice we hear, but i kind of want to challenge this
+          </aside>
+        </section>
+
+        <section data-background-image="img/mixin/andy.jpg">
+          <aside class="notes" data-markdown>If you can't really tell the difference on your retina display, your user sure as heck won't</aside>
+        </section>
+
+        <section data-background-image="img/mixin/andy-diff.jpg">
+          <aside class="notes" data-markdown>
+            this is the difference saving it down to that GCD size
+          </aside>
+        </section>
+
+        <section data-background-image="img/mixin/andy-diff2.jpg">
+          <aside class="notes" data-markdown>
+            - since we don't actually need that size, this is at its greatest size of 660px
+          </aside>
+        </section>
+
+        <section data-background-color='RGB(0, 255, 210)'>
+          <h1>195% improvement in Image Sizes</h1>
+          <aside class="notes" data-markdown>
+            Just from this one image, we've saved almost half of its size by resizing alone
+          </aside>
+        </section>
+
+        <section data-background-image="img/mixin/crew.jpg">
+          <aside class="notes" data-markdown>
+            There are other areas this can be improved too
+          </aside>
+        </section>
+
+        <section data-background-image="img/mixin/userimage.jpg">
+        </section>
+
+        <section data-background-color='RGB(0, 255, 210)'>
+          <h1>1.1 MB to 500 KB</h1>
+          <aside class="notes" data-markdown>
+            Just from saving the speaker images to their max size, we save 0.6 MB on the intitial download of the site for your user.
+          </aside>
+        </section>
+
+        <section data-background-color='RGB(0, 255, 210)'>
+          <h1>220% Savings in Image Sizes</h1>
+          <aside class="notes">
+            - think about the savings in render speed and memory
+            - literally saving your users money because they won't need to download 600KB of data
+          </aside>
+        </section>
+
+        <section data-background-color="black">
+          <h1>Step 2: Consider Image Format</h1>
+        </section>
+
+        <section>
+            <h2 class="blank-space">JPG: 500 KB</h2>
+             <h2 class="blank-space">WEBP: 407 KB</h2>
+            <aside class="notes" data-markdown>After WebP Conversion: 340 KB (+67 KB for the polyfill) = 407 KB</aside>
+        </section>
+
+        <section data-background-color='RGB(0, 255, 210)'>
+          <h1>234% Savings in Image Sizes</h1>
+          <aside class="notes" data-markdown>
+            - Total savings so far in just the home page and the intiial load
+            - Without resizing the images at all, 725 KB (+67 KB polyfill) == 139% savings without losing any quaity  
+          </aside>
+        </section>
+
+        <section data-background-color="black">
+          <h1>Step 3: Choose the Best Image Quality</h1>
+          <aside class="notes" data-markdown>smaller quality on smaller, less important images, consider compressive images</aside>
+        </section>
+
+        <section>
+          <h2>Picture Element</h2>
+            <pre><code>&lt;picture&gt;
+  &lt;source 
+    media="(min-width: 800px)"
+    srcset="images/tree@2x.png"&gt;
+  &lt;source 
+    media="(min-width: 400px)"
+    srcset="images/tree.png"&gt;
+  &lt;img 
+    src="images/tree@sm.png" 
+    alt="a happy little tree"&gt;
+&lt;/picture&gt;</code></pre>
+          <aside class="notes" data-markdown>In the end, If you want to send really high quality assets, if this is a website for an agenecy and you're not having performance issues, please consider your mobile users and use the picture element</aside>
+        </section>
+
+        <section data-background-color="black">
+          <h1>Step 4: Profit! 
+            <small>(Like, Srsly, Literally)</small></h1>
+          <aside class="notes" data-markdown>
+            Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year.
+          </aside>
+        </section>
+
+        <!-- Section Seven: Review of what we learned -->
+
+        <section>
+          <h2>Image Optimization Tips:</h2>
+          <ul>
+            <li>Probably don't send an image larger than it needs to be</li>
+            <li class="fragment">Be aware of emerging image formats</li>
+            <li class="fragment">Use the right format for the job (pros/cons)</li>
+            <li class="fragment">Compress your smaller images to low qualities</li>
+            <li class="fragment">Always run all images through an optimizer</li>
+            <li class="fragment">Small improvements are still improvements</li>
+            <li class="fragment">Educate the entire team</li>
+          </ul>
         </section>
 
 				<section>
 					<img src="img/balance.svg" alt="">
-					<aside class="notes">
-						find balance between quality and optimization
+					<aside class="notes" data-markdown>
+            - while this talk was a little heavy-handed on the optimization end, find balance
+            - 
 					</aside>
 				</section>
 
         <!-- End Quote -->
-        <section class="quote-slide">
+        <!--<section class="quote-slide">
           <blockquote>
             "Talent is a pursued interest. Anything that you’re willing to practice, you can do."
             <footer>&mdash; Bob Ross</footer>
           </blockquote>
-        </section>
+          <aside class="notes" data-markdown>
+             And to leave you with my favorite bob ross quote (the next one):
+          </aside>
+        </section>-->
 
-        <!-- And to leave you with my favorite bob ross quote-->
-        <section>
+        <section class="quote-slide">
           <blockquote>
             "Remember how free clouds are. They just lay around in the sky all day long."
             <footer>&mdash; Bob Ross</footer>
           </blockquote>
+          <aside class="notes" data-markdown>
+            - one of my favorite Bob Ross quotes. like srsly hes brilliant
+            - but this is how the web should be -- ppl shouldn't be obstructed by media to use it
+            - the web should be free, a place for users to eb and flow whenever they want and access data when they want
+            - build happy little pixels to make happy little websites and happy users
+          </aside>
+        </section>
+
+        <section data-background-color="RGB(88, 60, 160)">
+          <h1>Build a better web</h1>
+          <aside class="notes" data-markdown>
+            - What this all boils down to is a single principle: to build a better web. 
+            - Build it to be faster and more accessible, and consider that small, incrimental changes lead to large impact overall.
+            - Build something that people love
+            - but more importantly:
+            </aside>
+        </section>
+
+        <section data-background-image="img/angrycat.gif">
+        <aside class="notes" data-markdown>build something that people don't hate
+        </aside>
+        </section>
+
+        <section>
+          <h1>Thank You 💕 @una</h1>
+          <ul style="font-size: .7em">
+            <li><a href="https://www.soasta.com/blog/google-mobile-web-performance-study/">Google Mobile Perf Study Results</a></li>
+            <li><a href="https://blog.codinghorror.com/progressive-image-rendering/">Progressive Rendering</a></li>
+            <li><a href="https://www.youtube.com/watch?v=k4Xkpawt1EU">Putting your Images on a Diet [Video]</a></li>
+            <li><a href="https://developers.google.com/speed/webp/docs">WebP Documentation</a></li>
+            <li><a href="https://www.youtube.com/watch?v=NdOqr9C8UJ8">Video on WEBP</a></li>
+            <li><a href="https://sewelldirect.com/learning-center/what-is-deep-color">Deep Color</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2BReTHTcogM">CSS Color Level 4</a></li>
+            <li><a href="http://flif.info/example.html">FLIF Format</a></li>
+            <li><a href="http://socialcompare.com/en/comparison/image-file-formats">Comparing File Formats</a></li>
+            <li><a href="http://blog.imgur.com/2014/10/09/introducing-gifv/">Introducing GIFV</a></li>
+            <li><a href="http://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/">Social Media Image Sizes Cheat Sheet</a></li>
+            <li><a href="https://css-tricks.com/the-blur-up-technique-for-loading-background-images/">"Blur-Up" Technique</a></li>
+            <li><a href="https://jmperezperez.com/medium-image-progressive-loading-placeholder/">Medium's Image Loading Technique</a></li>
+            <li><a href="https://daverupert.com/2015/12/intrinsic-placeholders-with-picture/">Intrinsic Placeholders</a></li>
+            <li><a href="https://webkit.org/blog/6784/new-video-policies-for-ios/">iOS Video Autoplay News</a></li>
+            <li><a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/">Facebook Image Loading Technique</a></li>
+            <li><a href="http://scottjehl.github.io/picturefill/">Picturefill</a></li>
+          </ul>
         </section>
 			</div>
 		</div>

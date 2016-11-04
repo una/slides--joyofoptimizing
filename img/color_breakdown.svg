@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 132.5" style="enable-background:new 0 0 200 132.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{font-family:'BalooThambi-Regular';}
+	.st2{font-size:14px;}
+	.st3{fill:#C1272D;}
+	.st4{fill:#39B54A;}
+	.st5{fill:#1375EA;}
+	.st6{fill:#EB6D24;}
+	.st7{font-size:10px;}
+	.st8{fill:none;stroke:#C1272D;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#39B54A;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#1375EA;stroke-miterlimit:10;}
+	.st11{font-size:7px;}
+	.st12{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<rect x="57.4" y="29.3" class="st0" width="109" height="14.8"/>
+<text transform="matrix(1 0 0 1 57.388 38.5533)"><tspan x="0" y="0" class="st1 st2">RGB(</tspan><tspan x="30.8" y="0" class="st3 st1 st2">235</tspan><tspan x="52.6" y="0" class="st1 st2">,</tspan><tspan x="56" y="0" class="st4 st1 st2"> 109</tspan><tspan x="80.6" y="0" class="st1 st2">, </tspan><tspan x="86.8" y="0" class="st5 st1 st2">36</tspan><tspan x="101.9" y="0" class="st1 st2">)</tspan></text>
+<path class="st6" d="M44.4,47.4H18.1c-2.8,0-5-2.2-5-5V16.2c0-2.8,2.2-5,5-5h26.2c2.8,0,5,2.2,5,5v26.2
+	C49.4,45.2,47.2,47.4,44.4,47.4z"/>
+<rect x="82.2" y="48" class="st0" width="55.4" height="18.5"/>
+<text transform="matrix(1 0 0 1 82.19 54.6426)" class="st3 st1 st7">11101011</text>
+<rect x="111.9" y="58.6" class="st0" width="55.4" height="18.5"/>
+<text transform="matrix(1 0 0 1 111.8707 65.1967)" class="st4 st1 st7">1101101</text>
+<rect x="137.6" y="67.8" class="st0" width="55.4" height="18.5"/>
+<text transform="matrix(1 0 0 1 137.5989 74.4316)" class="st5 st1 st7">100100</text>
+<line class="st8" x1="97.8" y1="46.4" x2="97.8" y2="40.9"/>
+<line class="st9" x1="126" y1="40.9" x2="126" y2="55.7"/>
+<line class="st9" x1="126" y1="67.8" x2="126" y2="91.5"/>
+<line class="st10" x1="150.8" y1="40.9" x2="150.8" y2="64.9"/>
+<line class="st10" x1="150.8" y1="78" x2="150.8" y2="91.5"/>
+<rect x="57.4" y="13.7" class="st0" width="47.2" height="10"/>
+<text transform="matrix(1 0 0 1 57.3879 20.3418)" class="st6 st1 st7">Pumpkin</text>
+<rect x="124.4" y="110" class="st0" width="47.2" height="10"/>
+<text transform="matrix(1 0 0 1 124.4215 116.6479)" class="st6 st1 st7">#eb6d24</text>
+<rect x="92.3" y="94.7" class="st0" width="84" height="10.1"/>
+<text transform="matrix(1 0 0 1 92.2896 101.2876)"><tspan x="0" y="0" class="st3 st1 st7">eb</tspan><tspan x="11.4" y="0" class="st1 st7">        </tspan><tspan x="27.4" y="0" class="st4 st1 st7">6d</tspan><tspan x="38.8" y="0" class="st1 st7">       </tspan><tspan x="52.8" y="0" class="st5 st1 st7">24</tspan></text>
+<line class="st8" x1="97.8" y1="91.5" x2="97.8" y2="57.3"/>
+<rect x="31.3" y="59.6" class="st0" width="45.8" height="13.8"/>
+<text transform="matrix(1 0 0 1 31.2612 64.2546)" class="st1 st11">binary</text>
+<rect x="31.3" y="96.4" class="st0" width="61" height="13.8"/>
+<text transform="matrix(1 0 0 1 31.2612 101.0549)" class="st1 st11">hexadecimal</text>
+<polyline class="st12" points="70,48 60.5,48 60.5,76 70,76 "/>
+</svg>

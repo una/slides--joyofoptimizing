@@ -13,6 +13,7 @@
 
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
 
 
 // Override theme settings (see ../template/settings.scss)
@@ -23,10 +24,10 @@ $headingColor: #222;
 
 $mainFontSize: 38px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Baloo Thambi', 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 600;
 $linkColor: #2a76dd;
 $linkColorHover: lighten( $linkColor, 15% );
@@ -48,6 +49,10 @@ section.has-dark-background {
 // ---------------------------------------------
 
 .reveal section {
+
+	h1, h2, h3 {
+		line-height: 1.35;
+	}
 
   img {
     border: none;
@@ -82,6 +87,7 @@ section.has-dark-background {
 		width: 100%;
 		font-style: normal;
 		font-size: 1.5em;
+		font-family: $headingFont;
 
 		footer {
 			font-style: italic;
@@ -95,6 +101,16 @@ section.has-dark-background {
     float: left;
 	}
 
+	.section--third {
+		width: 33%;
+		float: left;
+	}
+
+	.section--fourth {
+		width: 25%;
+		float: left;
+	}
+
 	.difference {
 		mix-blend-mode: difference;
 	}
@@ -104,20 +120,42 @@ section.has-dark-background {
 		cursor: pointer;
 		position: relative;
 
-		&:hover {
-			&:after {
-				content: 'overlap me';
-				position: absolute;
-				top: .5em;
-				right: .8em;
-				font-size: .8em;
-				background-color: white;
-				padding: 0 .2em;
-			}
+		&.current-fragment {
+			transition-duration: 1s;
+			transform: translate(-100%);
 		}
+	}
+
+	&.flex.present {
+		display: flex !important;
+		align-items: center;
 	}
 
 	.is-overlapped {
 		transform: translate(-100%);
 	}
+
+	.blank-space {
+		background: black;
+    color: white;
+    padding: 0 .3em;
+
+		&-intro {
+			background: black;
+    	color: white;
+    	padding: 0 .3em;
+			width: 7em;
+			margin-right: .2em;
+			display: inline-block;
+		}
+	}
+
+	.source {
+		margin: 3em 0 0;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    font-size: .5em;
+	}
+
 }
