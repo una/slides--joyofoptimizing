@@ -70,7 +70,7 @@
             <li class="fragment"><h3><span class="blank-space-intro">Solutions:</span> Automatic to Manual</h3></li>
             <li class="fragment"><h3><span class="blank-space-intro">Example Time:</span> Yay! </h3></li>
           </ol>
-          
+
         </section>
 
         <!-- Section One: Setup - Why this is important -->
@@ -122,7 +122,7 @@
 				<section>
 					<img src="img/funfacts.svg" alt="">
           <aside class="notes" data-markdown>
-            - New Google study from September 2016 (last month)
+            - New Google study from September 2016
             - surveyed over 10,000 mobile websites on 3G
             - We'll play a game
           </aside>
@@ -187,6 +187,13 @@
             So while we're arguing about including jQuery or not, remove one image request and have all the jQuery you want
           </aside>
         </section>
+
+				<section class="quote-slide">
+					 <blockquote>
+						 "You can't be a web performance expert without being an image expert."
+						 <footer>&mdash; Tobin Titus (ImageCon 2017)</footer>
+					 </blockquote>
+				 </section>
 
         <!-- Section Two: Image Types - Understanding your Canvas -->
 
@@ -297,7 +304,7 @@
             <img src="img/gifgif.gif" alt="">
             </ul>
           </div>
-          
+
             <aside class="notes" data-markdown>
               - GIF: 256 colors in addition to the raw image data stored and displayed at any time
               - Doesn't support transparency but allows for dithering
@@ -340,7 +347,7 @@
               <li class="fragment">Delta Encoding</li>
             </ul>
           </div>
-          
+
             <aside class="notes" data-markdown>
               - PNG = open source reaction to the gif threatening to lisence
               - True Color means 16 million colors
@@ -359,7 +366,7 @@
             - PS3 supports deep color, seeing it in most modern systems (Windows 7+)
             - you prob wont notice a difference and your video card needs to support it
             - most people can't tell the difference bw 16-bit and 32-bit color
-            - higher color depth requires more system resources 
+            - higher color depth requires more system resources
           </aside>
         </section>
 
@@ -414,6 +421,21 @@
           </aside>
         </section>
 
+				<section>
+					<img src="https://1.bp.blogspot.com/-5bPNsF5plzw/VnJWs-7RbrI/AAAAAAAARmA/DaZmn8YUjAk/s1600-r/logo_research_at_google_color_1x_web_512dp.png" alt="">
+					<h1>Guetzli Compression</h1>
+					https://research.googleblog.com/2017/03/announcing-guetzli-new-open-source-jpeg.html
+					and https://twitter.com/jhnsnc/status/842750852553150466
+					<aside class="notes" data-markdown>
+						- and people are continuing to iterate on JPEG because its so widely used
+						- Google *just* released Guetzli, a new open source algorithm
+						- claims to produce high quality JPEG images, compressed 35% smaller than currently available methods
+						- targets the quantization stage in which the more visual quality loss is introduced
+						- Guetzli’s psychovisual model, which approximates color perception and visual masking in a more thorough and detailed way than what is achievable by simpler color transforms and the discrete cosine transform
+						- tradeoff: they take longer to compress
+					</aside>
+				</section>
+
         <section>
           <div class="section--third">
             <img src="img/mountain--blur.jpg" alt="">
@@ -431,6 +453,7 @@
             <h2>10%<br><span style="color:#d69">56 KB</h2>
           </div>
           <aside class="notes" data-markdown>
+						- these examples are from the current standard compression (not Guetzli)
             - histograms: fewer colors on lower qualities
             - spikes still stand out, but the general area in that graph is decreased as
             - "in between colors" are removed
@@ -512,7 +535,6 @@
         <section data-background-image="img/js2016.png">
           <h1 class="blank-space">Welcome to the web in 2016 ✨</h1>
           <aside class="notes" data-markdown>
-            And Chrome is just done with JPEG. What's wrong with JPG? Nothing. It's brilliant. But It's old. And we can do better. But again, this is the web, its 2016
           </aside>
         </section>
 
@@ -648,7 +670,7 @@
 </tbody>
 </table>
 <small class="source" style="margin-top:-1em"><a href="http://www.freewaregenius.com/convert-webp-image-format-jpg-png-format/">Source</a></small>
-<aside class="notes" data-markdown> 
+<aside class="notes" data-markdown>
             - There is a webp image format PS plugin
             - I personally like the ImageMagick CLI tool bc its super fast
           </aside>
@@ -705,11 +727,11 @@
         <section>
           <img src="img/caniuse--webm.jpg" alt="">
         </section>
-        
+
         <section data-background-image="img/webmconvert.jpg">
           <!--<img src="img/webmconvert.jpg" alt="">-->
         </section>
-        
+
         <section>
           <div class="section--half"><video autoplay controls loop src="img/chanel.mp4" alt=""></video><p>mp4: 3.5 MB</p></div>
           <div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
@@ -717,9 +739,9 @@
 
         <section>
           <pre><code>&lt;video&gt;
-  &lt;source src="src/video.mp4" 
+  &lt;source src="src/video.mp4"
           type='video.mp4; codecs="avc1.42E01E, mp4a.40.2"' /&gt;
-  &lt;source src="src/video.webm" 
+  &lt;source src="src/video.webm"
           type='video.webm; codecs="vp8, vorbis"' /&gt;
 &lt;/video&gt;</code></pre>
            <aside class="notes" data-markdown>you don't need a polyfill, can just send it as one of the video options</aside>
@@ -759,7 +781,7 @@
               <li>Encoding: <a href="https://webencoder.libbpg.org/">BPG Web Encoder</a></li>
               <li>Decoding (<a href="https://github.com/flaki/bpg2jpg">Polyfill</a>): BGP to JPEG converter (56 KB)</li>
             </ul>
-          
+
         </section>
 
         <section>
@@ -910,7 +932,7 @@
           </div>
           <aside class="notes" data-markdown>
             - continue our game
-            - both of these are the exact same 
+            - both of these are the exact same
           </aside>
         </section>
 
@@ -1075,8 +1097,8 @@
         <section data-background-image="img/bg4.jpg">
           <h1 class="blank-space">Protip: Less Colors, Less Problems</h1>
         </section>
-      
-        <!--<section>
+
+        <section>
           <h1>Compressive Images</h1>
           <img src="img/compressive.png" alt="">
           <small class="resource"><a href="https://www.filamentgroup.com/lab/compressive-images.html">Filament Group</a></small>
@@ -1103,14 +1125,14 @@
           <aside class="notes">
             - can also experiment with 50% quality and 1.5x the size to mitigate the potential memory issues
           </aside>
-        </section>-->
+        </section>
 
-        <!--<section>
+        <section>
           <blockquote>
           "If you have to send a loading indicator, you're not optimizing your images enough"
           <footer>&mdash; Bruce Lawson (@ SmartWeb Conf)</footer>
           </blockquote>
-        </section>-->
+        </section>
 
       <!--Animation-->
 
@@ -1186,7 +1208,7 @@
             <h2>Interframe (vids)</h2>
             <img src="img/framediff.png" alt="">
           </div>
-          
+
           <aside class="notes" data-markdown>
             So why are vids so much smaller?
             - gifs store *every* frame, so no lookups or preloading, just shows a picture
@@ -1312,7 +1334,7 @@
           <h1>234% Savings in Image Sizes</h1>
           <aside class="notes" data-markdown>
             - Total savings so far in just the home page and the intiial load
-            - Without resizing the images at all, 725 KB (+67 KB polyfill) == 139% savings without losing any quaity  
+            - Without resizing the images at all, 725 KB (+67 KB polyfill) == 139% savings without losing any quaity
           </aside>
         </section>
 
@@ -1324,21 +1346,21 @@
         <section>
           <h2>Picture Element</h2>
             <pre><code>&lt;picture&gt;
-  &lt;source 
+  &lt;source
     media="(min-width: 800px)"
     srcset="images/tree@2x.png"&gt;
-  &lt;source 
+  &lt;source
     media="(min-width: 400px)"
     srcset="images/tree.png"&gt;
-  &lt;img 
-    src="images/tree@sm.png" 
+  &lt;img
+    src="images/tree@sm.png"
     alt="a happy little tree"&gt;
 &lt;/picture&gt;</code></pre>
           <aside class="notes" data-markdown>In the end, If you want to send really high quality assets, if this is a website for an agenecy and you're not having performance issues, please consider your mobile users and use the picture element</aside>
         </section>
 
         <section data-background-color="black">
-          <h1>Step 4: Profit! 
+          <h1>Step 4: Profit!
             <small>(Like, Srsly, Literally)</small></h1>
           <aside class="notes" data-markdown>
             Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year.
@@ -1364,7 +1386,7 @@
 					<img src="img/balance.svg" alt="">
 					<aside class="notes" data-markdown>
             - while this talk was a little heavy-handed on the optimization end, find balance
-            - 
+            -
 					</aside>
 				</section>
 
@@ -1395,7 +1417,7 @@
         <section data-background-color="RGB(88, 60, 160)">
           <h1>Build a better web</h1>
           <aside class="notes" data-markdown>
-            - What this all boils down to is a single principle: to build a better web. 
+            - What this all boils down to is a single principle: to build a better web.
             - Build it to be faster and more accessible, and consider that small, incrimental changes lead to large impact overall.
             - Build something that people love
             - but more importantly:
