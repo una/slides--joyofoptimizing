@@ -62,7 +62,7 @@
           <div class="fragment section--half" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
         </section>
 
-        <section data-background-color="RGB(88, 60, 160)">
+        <section data-background-color="#004236">
           <h1>Images on the Web</h1>
           <ol>
             <li class="fragment"><h3><span class="blank-space-intro">The Problem:</span> Understanding Why</h3></li>
@@ -115,18 +115,24 @@
         <section data-background-image="img/angrycat.gif">
         </section>
 
-        <section>
-					<img src="img/sowhat.svg" alt="">
-				</section>
-
 				<section>
-					<h1>Let's Look at Some Numbers</h1>
-          <aside class="notes" data-markdown>
-            - Google study from September 2016
-            - surveyed over 10,000 mobile websites on 3G
-            - We'll play a game
+					<img src="img/sowhat.svg" alt="">
+          <aside class="notes">
+            - so what? devices are getting better,
+            - network speeds are improving
+            - and the classic: it works on my system
           </aside>
 				</section>
+
+        <section data-background="img/CwQhZ0aWcAAgLpe.jpg">
+          <aside class="notes" data-markdown>
+            - last month, for the first time ever, Mobile+tablet usage has eclipsed desktop usage
+            - Google study from September 2016
+            - surveyed over 10,000 mobile websites on 3G
+            - Paul brought up this study yesterday
+            - We'll play a game to see how well you retained the content
+          </aside>
+        </section>
 
         <section>
           <h2>Average load time for mobile sites is: <span class="blank-space"><span class="fragment">19</span> seconds</span> over 3G</h2>
@@ -159,6 +165,14 @@
           <img class="fragment" src="img/avgspeed-aus.jpg" alt="">
           <img class="fragment" src="img/avgspeed-india.jpg" alt="">
           <small class="source"><a href="https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds">Wikipedia</a></small>
+				</section>
+
+				<section data-background-color="yellow">
+          <h1>Access to information should be a basic human right</h1>
+          <aside class="notes" data-markdown>
+            - alot of my data is about e-commerce bc it's easy to get funding for studies on this -- there's money behind that
+            - but by refusing to pay attention to performance, we're restricting access to information for people who don't have the fast connections we're so used to
+          </aside>
         </section>
 
        <section class="quote-slide">
@@ -395,7 +409,7 @@
           </aside>
         </section>-->
 
-				<section data-background-color="RGB(0, 255, 210)">
+				<section data-background-color="RGB(17, 149, 148)">
           <h1>Lossless v. Lossy</h1>
           <aside class="notes" data-markdown>
             - PNG is an example of lossless compression, it doesn't lose quality.
@@ -759,7 +773,7 @@
           <h1>More Options, <br>More Power</h1>
         </section>
 
-        <section data-background-color="RGB(0, 255, 210)">
+        <section data-background-color="RGB(17, 149, 148)">
           <h1>Experimental Formats</h1>
           <aside class="notes">
             - these are really promising future formats that may very well be the future of image types
@@ -850,7 +864,7 @@
 
         <!-- Section Three: Automatic Image Optimization -->
 
-        <section data-background-color="RGB(88, 60, 160)">
+        <section data-background-color="#004236">
           <h1>Solutions and Protips</h1>
         </section>
 
@@ -1022,7 +1036,7 @@
           </aside>
         </section>
 
-        <section data-background-image="img/bg1.jpg">
+				<section data-background-image="img/bg1.jpg">
           <h1 class="blank-space">Protip: Embrace Blur</h1>
         </section>
 
@@ -1073,8 +1087,13 @@
             <div class="section--third"><figure class="walden"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Walden</h3></div>
           <aside class="notes" data-markdown>
             - Blend modes will take some additional time to repaint the page
-            - lets benchmark what the impact of that additional paint is in comparison to the image savings we're getting
+            - lets benchmark (click)
           </aside>
+        </section>
+
+        <section data-background="yellow">
+          <h2>Warning: this study is inherently bias and has a small sample size</h2>
+          <aside class="notes"> what the impact of that additional paint is in comparison to the image savings we're getting</aside>
         </section>
 
         <section data-background-image="img/comparisonload.jpg">
@@ -1093,6 +1112,10 @@
             - images alone -- no live blend modes
             - lets again benchmark that paint time with the image savings (this time 115 KB not 190KB)
           </aside>
+        </section>
+
+        <section data-background="yellow">
+          <h2>Warning: this study is also inherently bias and has a small sample size</h2>
         </section>
 
         <section data-background-image="img/colored-jpg.jpg">
@@ -1227,7 +1250,7 @@
 
         <!-- Section Six: Lets Do The Thing (Mixin Example) -->
 
-        <section data-background-color="RGB(88, 60, 160)">
+        <section data-background-color="#004236">
           <h1>Now We Paint</h1>
         </section>
 
@@ -1297,7 +1320,7 @@
           </aside>
         </section>
 
-        <section data-background-color='RGB(0, 255, 210)'>
+        <section data-background-color='RGB(17, 149, 148)'>
           <h1>195% improvement in Image Sizes</h1>
           <aside class="notes" data-markdown>
             Just from this one image, we've saved almost half of its size by resizing alone
@@ -1313,14 +1336,14 @@
         <section data-background-image="img/mixin/userimage.jpg">
         </section>
 
-        <section data-background-color='RGB(0, 255, 210)'>
+				<section data-background-color='RGB(17, 149, 148)'>
           <h1>1.1 MB to 500 KB</h1>
           <aside class="notes" data-markdown>
             Just from saving the speaker images to their max size, we save 0.6 MB on the intitial download of the site for your user.
           </aside>
         </section>
 
-        <section data-background-color='RGB(0, 255, 210)'>
+        <section data-background-color='RGB(17, 149, 148)'>
           <h1>220% Savings in Image Sizes</h1>
           <aside class="notes">
             - think about the savings in render speed and memory
@@ -1334,15 +1357,14 @@
 
         <section>
             <h2 class="blank-space">JPG: 500 KB</h2>
-             <h2 class="blank-space">WEBP: 407 KB</h2>
-            <aside class="notes" data-markdown>After WebP Conversion: 340 KB (+67 KB for the polyfill) = 407 KB</aside>
+             <h2 class="blank-space">WEBP: 348 KB</h2>
+            <aside class="notes" data-markdown>After WebP Conversion: 340 KB (+8 KB for the picturefill polyfill) = 348 KB</aside>
         </section>
 
-        <section data-background-color='RGB(0, 255, 210)'>
-          <h1>234% Savings in Image Sizes</h1>
+        <section data-background-color='RGB(17, 149, 148)'>
+          <h1>316% Savings in Image Sizes</h1>
           <aside class="notes" data-markdown>
-            - Total savings so far in just the home page and the intiial load
-            - Without resizing the images at all, 725 KB (+67 KB polyfill) == 139% savings without losing any quaity
+            - Total savings so far in just the home page and the initial load
           </aside>
         </section>
 
@@ -1351,8 +1373,7 @@
           <aside class="notes" data-markdown>smaller quality on smaller, less important images, consider compressive images</aside>
         </section>
 
-        <section>
-          <h2>Picture Element</h2>
+        <section data-background-color="RGB(63, 63, 63)">
             <pre><code>&lt;picture&gt;
   &lt;source
     media="(min-width: 800px)"
@@ -1364,14 +1385,31 @@
     src="images/tree@sm.png"
     alt="a happy little tree"&gt;
 &lt;/picture&gt;</code></pre>
-          <aside class="notes" data-markdown>In the end, If you want to send really high quality assets, if this is a website for an agenecy and you're not having performance issues, please consider your mobile users and use the picture element</aside>
+          <aside class="notes" data-markdown>
+            - In the end, If you want to send really high quality assets, please use the picture element
+            - if you're not concerned about performance, or care about humans getting access to your data around the world (where many are exclusively on mobile devices),
+            - even if your audience is entirely 24-year-old tech bros w/Macbooks, you still need to consider mobile performance</aside>
+        </section>
+
+        <section>
+          <div class="section--half"><img src="img/clothes.jpg" alt=""></div>
+          <div class="section--half"><img style="margin-top:2.25em" src="img/criteo-mobile-commerce-report-q42014-6-638.jpg" alt=""></div>
+
+          <aside class="notes" data-markdown>
+            - I was getting lunch yesterday with someone who works in e-commerce that I just met here, his name's Alex
+            - introduced me to a company called Criteo and I started doing some digging
+            - he said that mobile design and speed was even *more* important for the high-end/luxury market
+            - those users are more likely to shop on mobile devices and make quick decisions than wait and browse for the best deals on browsers
+          </aside>
         </section>
 
         <section data-background-color="black">
           <h1>Step 4: Profit!
             <small>(Like, Srsly, Literally)</small></h1>
           <aside class="notes" data-markdown>
-            Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year.
+            - Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year.
+            - Even if you don't care about page speed and information access, improving performance will still be worth it
+
           </aside>
         </section>
 
@@ -1381,8 +1419,8 @@
           <h2>Image Optimization Tips:</h2>
           <ul>
             <li>Probably don't send an image larger than it needs to be</li>
-            <li class="fragment">Be aware of emerging image formats</li>
-            <li class="fragment">Use the right format for the job (pros/cons)</li>
+            <li class="fragment">Be aware of emerging image formats (pros/cons)</li>
+            <li class="fragment"><code>&lt;picture&gt;</code> is your friend!</li>
             <li class="fragment">Compress your smaller images to low qualities</li>
             <li class="fragment">Always run all images through an optimizer</li>
             <li class="fragment">Small improvements are still improvements</li>
@@ -1422,7 +1460,7 @@
           </aside>
         </section>
 
-        <section data-background-color="RGB(88, 60, 160)">
+        <section data-background-color="#004236">
           <h1>Build a better web</h1>
           <aside class="notes" data-markdown>
             - What this all boils down to is a single principle: to build a better web.
@@ -1439,7 +1477,7 @@
 
         <section>
           <h1>Thank You 💕 @una</h1>
-          <ul style="font-size: .7em">
+          <ul style="font-size: .7em; column-count:2; list-style-position: inside;">
             <li><a href="https://www.soasta.com/blog/google-mobile-web-performance-study/">Google Mobile Perf Study Results</a></li>
             <li><a href="https://blog.codinghorror.com/progressive-image-rendering/">Progressive Rendering</a></li>
             <li><a href="https://www.youtube.com/watch?v=k4Xkpawt1EU">Putting your Images on a Diet [Video]</a></li>
