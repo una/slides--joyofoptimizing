@@ -52,14 +52,8 @@
 
 				<section data-background="img/intro/speakersammy.png">
           <h1 class="blank-space">@una</h1>
-          <div class="section--half" style="opacity: 0"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
-          <div class="section--half" style="opacity: 0" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
-        </section>
-
-				<section>
-          <h1 class="blank-space">@una</h1>
-          <div class="section--half"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
-          <div class="fragment section--half" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
+          <!-- <div class="section--half"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div> -->
+          <!-- <div class="fragment section--half" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div> -->
         </section>
 
         <section data-background-color="#004236">
@@ -90,29 +84,11 @@
           </aside>
         </section>
 
-        <section data-background-image="img/selfie-with-hillary.jpg-large">
-          <!--<img src="img/selfie-with-hillary.jpg-large" alt="">-->
-          <aside class="notes" data-markdown>
-            - This is where we are now.
-            - Now the cameras we have with us take 12MP photos (iPhone 7 specs)
-          </aside>
-        </section>
-
         <section>
           <h1>Irresponsible Imaging</h1>
           <aside class="notes" data-markdown>
             - We're at a phase where we can send images without thinking of the consequences
           </aside>
-        </section>
-
-        <section>
-          <img src="img/loader.gif" style="height: 20vh; margin-top: 10vh;" alt="">
-          <aside class="notes" data-markdown>
-            this is what we're doing to people with irresponsible imaging
-          </aside>
-        </section>
-
-        <section data-background-image="img/angrycat.gif">
         </section>
 
 				<section>
@@ -124,7 +100,8 @@
           </aside>
 				</section>
 
-        <section data-background="img/CwQhZ0aWcAAgLpe.jpg">
+        <section>
+					<img src="img/CwQhZ0aWcAAgLpe.jpg" alt="">
           <aside class="notes" data-markdown>
             - last month, for the first time ever, Mobile+tablet usage has eclipsed desktop usage
             - Google study from September 2016
@@ -144,9 +121,6 @@
 
         <section>
           <h2><span class="blank-space"><span class="fragment">53</span>%</span> of visits to mobile sites are abandoned after 3 seconds</h2>
-        </section>
-
-        <section data-background-image="img/angrycat.gif">
         </section>
 
         <section>
@@ -205,7 +179,7 @@
           </aside>
         </section>
 
-				<section class="quote-slide">
+				<section>
 					 <blockquote>
 						 "You can't be a web performance expert without being an image expert."
 						 <footer>&mdash; Tobin Titus (ImageCon 2017)</footer>
@@ -251,14 +225,6 @@
         </section>
 
         <section>
-          <h1 style="font-size: 2em">🌲🌳🌴</h1>
-          <aside class="notes" data-markdown>
-            - emoji alone: sbix (extended bmp) on mac, bmp on Android, colr (layered vector) on Win.
-            - now lets take a look at some of my own artwork, my happy little tree
-          </aside>
-        </section>
-
-        <section>
           <h2>Happy? Little Trees</h2>
           <div class="section--fourth"><img src="img/tree-01.gif" alt=""><p>gif<br>9 kB</p></div>
           <div class="section--fourth"><img src="img/tree-01.png" alt=""><p>png<br>19 kB</p></div>
@@ -294,33 +260,25 @@
           </ul>
         </section>
 
-<!--
-        <section>
-          <h1>
-            BMP
-          </h1>
-          <ul>
-            <li>No image compression</li>
-            <li>Pixel-dependant</li>
-            <li>Native file format on Windows</li>
-          </ul>
-          <aside class="notes" data-markdown>
-            - It all started with the XBM format (literally valid C source code)
-            - BMP was a huge improvement</aside>
-        </section>-->
+				<style>
+				.clearfl {
+					overflow: hidden;
+				}</style>
 
         <section>
-          <div class="section--half">
-            <h1>GIF</h1>
-            <ul>
-              <li class="fragment">8-bit (256 Colors)</li>
-              <li class="fragment">Dithering Control<br> (32, 64, 128)</li>
-            </ul>
-          </div>
-          <div class="section--half">
-            <img src="img/gifgif.gif" alt="">
-            </ul>
-          </div>
+					<div class="clearfl">
+	          <div class="section--half">
+	            <h1>GIF</h1>
+	            <ul>
+	              <li class="fragment">8-bit (256 Colors)</li>
+	              <li class="fragment">Dithering Control<br> (32, 64, 128)</li>
+	            </ul>
+	          </div>
+	          <div class="section--half">
+	            <img src="img/gifgif.gif" alt="">
+	            </ul>
+	          </div>
+					</div>
 
             <aside class="notes" data-markdown>
               - GIF: 256 colors in addition to the raw image data stored and displayed at any time
@@ -330,8 +288,10 @@
         </section>
 
         <section>
-          <h1>Gif Dithering</h1>
-          <img src="img/gifdither.gif" alt="">
+					<div>
+	          <h1>Gif Dithering</h1>
+	          <img src="img/gifdither.gif" alt="">
+					</div>
         </section>
 
         <section data-background-image="img/dither-noise.jpg">
@@ -348,6 +308,7 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half">
             <h1>GIF</h1>
             <ul>
@@ -364,6 +325,7 @@
               <li class="fragment">Delta Encoding</li>
             </ul>
           </div>
+				</div>
 
             <aside class="notes" data-markdown>
               - PNG = open source reaction to the gif threatening to lisence
@@ -422,9 +384,11 @@
 				</section>
 
         <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
-          <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
-          <div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
+					<div class="clearfl">
+        	  <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
+          	<div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
           <!--<img src="img/screenshot-comparison.jpg" alt="">-->
+				</div>
         </section>
 
         <section>
@@ -459,21 +423,23 @@
 				</section>
 
         <section>
-          <div class="section--third">
-            <img src="img/mountain--blur.jpg" alt="">
-            <img src="img/histogram-100.jpg" alt="">
-            <h2>100%<br><span style="color:#d69">264 KB</h2>
-          </div>
-          <div class="section--third">
-            <img src="img/mountain--blur--optimized-60.jpg" alt="">
-            <img src="img/histogram-60.jpg" alt="">
-            <h2>60%<br><span style="color:#d69">199 KB</h2>
-          </div>
-          <div class="section--third">
-            <img src="img/mountain--blur--optimized-10.jpg" alt="">
-            <img src="img/histogram-10.jpg" alt="">
-            <h2>10%<br><span style="color:#d69">56 KB</h2>
-          </div>
+					<div class="clearfl">
+	          <div class="section--third">
+	            <img src="img/mountain--blur.jpg" alt="">
+	            <img src="img/histogram-100.jpg" alt="">
+	            <h2>100%<br><span style="color:#d69">264 KB</h2>
+	          </div>
+	          <div class="section--third">
+	            <img src="img/mountain--blur--optimized-60.jpg" alt="">
+	            <img src="img/histogram-60.jpg" alt="">
+	            <h2>60%<br><span style="color:#d69">199 KB</h2>
+	          </div>
+	          <div class="section--third">
+	            <img src="img/mountain--blur--optimized-10.jpg" alt="">
+	            <img src="img/histogram-10.jpg" alt="">
+	            <h2>10%<br><span style="color:#d69">56 KB</h2>
+	          </div>
+					</div>
           <aside class="notes" data-markdown>
 						- these examples are from the current standard compression (not Guetzli)
             - histograms: fewer colors on lower qualities
@@ -483,12 +449,14 @@
         </section>
 
         <section>
-          <div class="section--half"><img src="img/mountain-high-quality.jpg" alt=""><h2>100%<br><span style="color:#d69">264 KB</h2></div>
-          <div class="section--half"><img src="img/mountain-low-quality.jpg" alt=""><h2>10%<br><span style="color:#d69">56 KB</h2></div>
-          <aside class="notes">
-            - here is what that banding and distortion looks like up close
-            - the quality you save it as affects how much rounding the pixels will do merging with the pixels surrounding them
-          </aside>
+					<div class="clearfl">
+	          <div class="section--half"><img src="img/mountain-high-quality.jpg" alt=""><h2>100%<br><span style="color:#d69">264 KB</h2></div>
+	          <div class="section--half"><img src="img/mountain-low-quality.jpg" alt=""><h2>10%<br><span style="color:#d69">56 KB</h2></div>
+	          <aside class="notes">
+	            - here is what that banding and distortion looks like up close
+	            - the quality you save it as affects how much rounding the pixels will do merging with the pixels surrounding them
+	          </aside>
+					</div>
         </section>
 
         <section>
@@ -498,6 +466,7 @@
         </section>
 
          <section>
+					 <div class="clearfl">
            <div class="section--half">
             <h1>JPEG 2000</h1>
               <ul>
@@ -516,6 +485,7 @@
             </ul>
            </div>
             <a href="https://en.wikipedia.org/wiki/JPEG_2000" class="source">Wikipedia</a>
+					</div>
             <aside class="notes" data-markdown>
               - I heard these names popping up a lot as improvements on JPEG
               - Problem is: nobody can really agree on a better implementation than we currently have
@@ -576,9 +546,11 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half"><img src="img/1-mountainscape-Bob-Ross.jpg" alt=""><p>JPG 168 KB</p></div>
           <div class="section--half"><img src="img/1-mountainscape-Bob-Ross.webp" alt=""><p>WEBP 141 KB</p></div>
-          <aside class="notes" data-markdown>
+				</div>
+					<aside class="notes" data-markdown>
             - this example is lossless compression
             - Avg of 30% savings in lossless -- not bad
             - How WebP Works: Predictive coding
@@ -761,9 +733,11 @@
         </section>
 
         <section>
-          <div class="section--half"><video autoplay controls loop src="img/chanel.mp4" alt=""></video><p>mp4: 3.5 MB</p></div>
-          <div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
-        </section>
+					<div class="clearfl">
+          	<div class="section--half"><video autoplay controls loop src="img/chanel.mp4" alt=""></video><p>mp4: 3.5 MB</p></div>
+          	<div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
+					</div>
+				</section>
 
         <section data-background-color="RGB(63, 63, 63)">
           <pre><code style="padding: 1em 0 1em 1em; font-size: 1.9rem;
@@ -787,10 +761,6 @@
           <aside class="notes">
             - these are really promising future formats that may very well be the future of image types
           </aside>
-        </section>
-
-        <section data-background-image="img/explosion.gif">
-          <aside class="notes">gif pattern diffusion!</aside>
         </section>
 
         <section data-background-video="img/bpgmov.mov">
@@ -824,6 +794,7 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half">
             <img src="img/flif.png" alt="">
             <br><br>
@@ -840,6 +811,7 @@
               <li class="fragment"><strong>74%</strong> smaller than lossless JPEG XR compression</li>
             </ul>
           </div>
+				</div>
         </section>
 
         <section>
@@ -912,8 +884,10 @@
 				</section>
 
         <section>
-          <h2>ImageAlpha</h2>
-          <img src="img/imagealpha-1024x734.png" alt="">
+					<div>
+          	<h2>ImageAlpha</h2>
+          	<img src="img/imagealpha-1024x734.png" style="max-width:800px; "alt="">
+					</div>
         </section>
 
         <section>
@@ -953,6 +927,7 @@
 
         <section>
           <h2>Spot the Difference!</h2>
+					<div class="clearfl">
           <div class="section--half">
             <img src="img/mountain--original.jpg" alt="">
             <h3>409 KB</h3>
@@ -961,6 +936,7 @@
             <img src="img/mountain--blur.jpg" alt="">
             <h3>264 KB</h3>
           </div>
+				</div>
           <aside class="notes" data-markdown>
             - continue our game
             - both of these are the exact same
@@ -1029,9 +1005,11 @@
         </section>
 
         <section>
-					<div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
-					<div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
-          <a href="#" class="source">Codinghorror Blog</a>
+					<div class="clearfl">
+						<div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
+						<div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
+	          <a href="#" class="source">Codinghorror Blog</a>
+					</div>
           <aside class="notes">
             - if you've heard of progressive JPGs, you kind of get this for free with those
             - explain progressive JPGs
@@ -1050,8 +1028,10 @@
         </section>
 
         <section>
-          <div class="section--half"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
-          <div class="section--half"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
+					<div class="clearfl">
+	          <div class="section--half"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
+	          <div class="section--half"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
+					</div>
         </section>
 
         <section>
@@ -1112,6 +1092,7 @@
 				</style>
 
 				<section>
+					<div class="clearfl">
           <div class="section--half color-me"><img src="img/test-bw.jpeg" alt=""><h3>.color-me</h3></div>
           <div class="section--half">
           	<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
@@ -1125,6 +1106,7 @@
   }
 						</style>
           </div>
+				</div>
 					<aside class="notes" data-markdown>
 						- show some other blend modes
 						- can use solid colors, or gradients
@@ -1137,12 +1119,12 @@
         </section>
 
 				<section>
-					<h1>Mix Blend Mode</h1>
+					<h2>Mix Blend Mode</h2>
 					<img src="img/caniuse--mix-blend.jpg" alt="">
 				</section>
 
 				<section>
-					<h1>Background Blend</h1>
+					<h2>Background Blend</h2>
 					<img src="img/caniuse--bg-blend.jpg" alt="">
 				</section>
 
@@ -1170,9 +1152,11 @@
         </section>
 
         <section>
-          <div class="section--third"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
-          <div class="section--third"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
-          <div class="section--third"><img src="img/test-colored.jpg" alt=""><h2>845 KB</h2></div>
+					<div class="clearfl">
+	          <div class="section--third"><img src="img/test-color.jpeg" alt=""><h2>920 KB</h2></div>
+	          <div class="section--third"><img src="img/test-bw.jpeg" alt=""><h2>730 KB</h2></div>
+	          <div class="section--third"><img src="img/test-colored.jpg" alt=""><h2>845 KB</h2></div>
+					</div>
           <aside class="notes">
             - images alone -- no live blend modes
             - lets again benchmark that paint time with the image savings (this time 115 KB not 190KB)
@@ -1205,10 +1189,12 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half"><img src="img/bob_ross_csg024_autumn_glory.jpg" alt="">
           <p>123 KB</p></div>
           <div class="section--half"><img src="img/bob_ross_csg024_autumn_glory--2.jpg" alt=""
           <p>106 KB</p></div>
+				</div>
           <aside class="notes" data-markdown>
             - CAVEAT!: All images are bitmapped when expanded, so the larger image may take up more device memory than you realize
             - this can be a problem on mobile
@@ -1232,7 +1218,7 @@
 
       <!--Animation-->
 
-        <section data-background-color="RGB(138, 252, 229)">
+        <section data-background-color="#004236">
           <h1>Animated Images</h1>
         </section>
 
@@ -1286,16 +1272,9 @@
           <aside class="notes">idk about you but im super excited about this</aside>
         </section>
 
-        <section data-background-image="img/shaqhil.gif">
-        <aside class="notes" data-markdown>
-          - this is great news for gifv and autoplaying videos
-          - headers with video background components
-          - so why is video so much better than something like gif?
-        </aside>
-        </section>
-
         <section>
           <h1>Compression</h1>
+					<div class="clearfl">
           <div class="section--half">
             <h2>Intraframe (gif)</h2>
             <img src="img/spritesheet.jpg" alt="">
@@ -1304,6 +1283,7 @@
             <h2>Interframe (vids)</h2>
             <img src="img/framediff.png" alt="">
           </div>
+				</div>
 
           <aside class="notes" data-markdown>
             So why are vids so much smaller?
@@ -1353,9 +1333,11 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half"><img src="img/ps-batch.jpg" alt=""><a href="http://www.digitalartsonline.co.uk/tutorials/photoshop/how-resize-multiple-images-in-photoshop/">Photoshop Batch Resize</a></div>
           <div class="section--half"><img src="img/installingimagemagick.jpg" alt=""><a href="http://www.imagemagick.org/script/command-line-tools.php">ImageMagick CLI Tools</a></div>
-        </section>
+				</div>
+				</section>
 
         <section>
           <code>mogrify ./ -resize 50%</code>
@@ -1417,6 +1399,7 @@
         </section>
 
 				<section data-background-image="../img/aea-homepage.jpg">
+					<p style="color: transparent">AEA</p>
 					<aside class="notes">
 						What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
 					</aside>
@@ -1464,9 +1447,10 @@
         </section>
 
         <section>
+					<div class="clearfl">
           <div class="section--half"><img src="img/clothes.jpg" alt=""></div>
           <div class="section--half"><img style="margin-top:2.25em" src="img/criteo-mobile-commerce-report-q42014-6-638.jpg" alt=""></div>
-
+				</div>
           <aside class="notes" data-markdown>
             - mobile design and speed was even *more* important for the high-end/luxury market
             - those users are more likely to shop on mobile devices and make quick decisions than wait and browse for the best deals on browsers
@@ -1535,13 +1519,8 @@
             - What this all boils down to is a single principle: to build a better web.
             - Build it to be faster and more accessible, and consider that small, incrimental changes lead to large impact overall.
             - Build something that people love
-            - but more importantly:
+            - but more importantly: build something people dont hate
             </aside>
-        </section>
-
-        <section data-background-image="img/angrycat.gif">
-        <aside class="notes" data-markdown>build something that people don't hate
-        </aside>
         </section>
 
         <section>
