@@ -706,7 +706,7 @@
           </ol>
         </section>
 
-        <section>
+				<section>
           <code>mogrify -format webp *.jpg</code>
         </section>
 
@@ -716,33 +716,40 @@
           <aside class="notes" data-markdown>
             - its called WebP.js
             - IE6+
-            - if your total savings > 67kb, this may be worth it
             - study done by Adrian James + Matt Shull in a post for smashing magazine determined this to be found this to be the most lightweight solution that works in all browsers
+            - however, it may be kind of weird to reqiure JS for your Firefox or Safari users to see your images
+            - you may want to do this conversion server-side instead
           </aside>
         </section>
 
-        <section>
-          picture element for webp
+        <section data-background-color="RGB(17, 149, 148)">
+          <h1>✨ Picture Element ✨</h1>
           <aside class="notes">
-            however, it may be kind of weird to reqiure JS for your Firefox or Safari users to see your images
+            - the picture element is some html magic that we can use instead, and we can use today
           </aside>
+        </section>
+
+        <section data-background-color="RGB(63, 63, 63)">
+<pre><code style="padding: 1em; font-size: 1.9rem;
+    line-height: normal;">&lt;picture&gt;
+  &lt;source type="image/webp"
+          srcset="img/happy-tree.webp"&gt;
+  &lt;img src="img/happy-tree.jpg"
+       alt="happy little tree"&gt;
+&lt;/picture&gt;
+</code></pre>
         </section>
 
         <section>
           <img src="img/caniuse--picture.jpg" alt="">
-        </section>
-
-        <section>
-          <aside class="notes">
-            - Picturefill Polyfill
-          </aside>
+          <aside class="notes">- Picturefill Polyfill (8 KB)</aside>
         </section>
 
         <section>
           <h2>WebM</h2>
           <img src="img/chanelsite.jpg" alt="">
           <aside class="notes" data-markdown>
-            - Developed Initially On2, Xiph, and Matroska; later Google
+            - just like WebP, WebM is now a Google initiative after acquiring O2 and some of the other companies that were working on it
           </aside>
         </section>
 
@@ -751,7 +758,6 @@
         </section>
 
         <section data-background-image="img/webmconvert.jpg">
-          <!--<img src="img/webmconvert.jpg" alt="">-->
         </section>
 
         <section>
@@ -759,12 +765,15 @@
           <div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
         </section>
 
-        <section>
-          <pre><code>&lt;video&gt;
+        <section data-background-color="RGB(63, 63, 63)">
+          <pre><code style="padding: 1em 0 1em 1em; font-size: 1.9rem;
+					    line-height: normal;">&lt;video&gt;
   &lt;source src="src/video.mp4"
-          type='video.mp4; codecs="avc1.42E01E, mp4a.40.2"' /&gt;
+          type='video.mp4;
+          codecs="avc1.42E01E, mp4a.40.2"'/&gt;
   &lt;source src="src/video.webm"
-          type='video.webm; codecs="vp8, vorbis"' /&gt;
+          type='video.webm;
+          codecs="vp8, vorbis"'/&gt;
 &lt;/video&gt;</code></pre>
            <aside class="notes" data-markdown>you don't need a polyfill, can just send it as one of the video options</aside>
         </section>
@@ -924,7 +933,7 @@
           </aside>
         </section>
 
-        <section data-background-image="img/mixinsvgo.jpg">
+        <section data-background-image="img/joysvgo.jpg">
         <h1 class="blank-space fragment"><a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a></h1>
         </section>
 
@@ -1085,11 +1094,67 @@
             <div class="section--third"><figure class="toaster"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Toaster</h3></div>
             <div class="section--third"><figure class="brannan"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Brannan</h3></div>
             <div class="section--third"><figure class="walden"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Walden</h3></div>
-          <aside class="notes" data-markdown>
+        </section>
+
+				<style>
+				.color-me {
+					position: relative;
+				}
+				.color-me::after {
+					content: '';
+					display: block;
+					margin-left: 2.5%;
+					width: 95%;
+					height: calc(100% - 2.6em);
+					position: absolute;
+					top: 0; left: 0;
+				}
+				</style>
+
+				<section>
+          <div class="section--half color-me"><img src="img/test-bw.jpeg" alt=""><h3>.color-me</h3></div>
+          <div class="section--half">
+          	<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  .color-me::after {
+    background: hotpink;
+    mix-blend-mode: multiply;
+  }
+
+  .color-me img {
+
+  }
+						</style>
+          </div>
+					<aside class="notes" data-markdown>
+						- show some other blend modes
+						- can use solid colors, or gradients
+						- linear-gradient(to left, red, yellow)
+						- stop at color
+						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
+            - add z-index: -1
+						- do luminosity
+					</aside>
+        </section>
+
+				<section>
+					<h1>Mix Blend Mode</h1>
+					<img src="img/caniuse--mix-blend.jpg" alt="">
+				</section>
+
+				<section>
+					<h1>Background Blend</h1>
+					<img src="img/caniuse--bg-blend.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/blend-painting-info.jpg" alt="">
+					<aside class="notes" data-markdown>
+						- CSStriggers.com is great site that shows how CSS affects render perf
             - Blend modes will take some additional time to repaint the page
+						- But is that rendering time bigger than the size savings?
             - lets benchmark (click)
           </aside>
-        </section>
+				</section>
 
         <section data-background="yellow">
           <h2>Warning: this study is inherently bias and has a small sample size</h2>
@@ -1351,11 +1416,17 @@
           </aside>
         </section>
 
+				<section data-background-image="../img/aea-homepage.jpg">
+					<aside class="notes">
+						What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
+					</aside>
+				</section>
+
         <section data-background-color="black">
           <h1>Step 2: Consider Image Format</h1>
         </section>
 
-        <section>
+        <section data-background-image="img/mixin/mixin.jpg">
             <h2 class="blank-space">JPG: 500 KB</h2>
              <h2 class="blank-space">WEBP: 348 KB</h2>
             <aside class="notes" data-markdown>After WebP Conversion: 340 KB (+8 KB for the picturefill polyfill) = 348 KB</aside>
@@ -1374,7 +1445,8 @@
         </section>
 
         <section data-background-color="RGB(63, 63, 63)">
-            <pre><code>&lt;picture&gt;
+            <pre><code style="padding: 1em; font-size: 1.9rem;
+						    line-height: normal;">&lt;picture&gt;
   &lt;source
     media="(min-width: 800px)"
     srcset="images/tree@2x.png"&gt;
@@ -1388,7 +1460,7 @@
           <aside class="notes" data-markdown>
             - In the end, If you want to send really high quality assets, please use the picture element
             - if you're not concerned about performance, or care about humans getting access to your data around the world (where many are exclusively on mobile devices),
-            - even if your audience is entirely 24-year-old tech bros w/Macbooks, you still need to consider mobile performance</aside>
+            - even if your audience is entirely 24-year-old techies w/Macbooks, you still need to consider mobile performance</aside>
         </section>
 
         <section>
@@ -1396,16 +1468,14 @@
           <div class="section--half"><img style="margin-top:2.25em" src="img/criteo-mobile-commerce-report-q42014-6-638.jpg" alt=""></div>
 
           <aside class="notes" data-markdown>
-            - I was getting lunch yesterday with someone who works in e-commerce that I just met here, his name's Alex
-            - introduced me to a company called Criteo and I started doing some digging
-            - he said that mobile design and speed was even *more* important for the high-end/luxury market
+            - mobile design and speed was even *more* important for the high-end/luxury market
             - those users are more likely to shop on mobile devices and make quick decisions than wait and browse for the best deals on browsers
           </aside>
         </section>
 
         <section data-background-color="black">
           <h1>Step 4: Profit!
-            <small>(Like, Srsly, Literally)</small></h1>
+            <small>(Like, Literally)</small></h1>
           <aside class="notes" data-markdown>
             - Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year.
             - Even if you don't care about page speed and information access, improving performance will still be worth it
@@ -1432,7 +1502,6 @@
 					<img src="img/balance.svg" alt="">
 					<aside class="notes" data-markdown>
             - while this talk was a little heavy-handed on the optimization end, find balance
-            -
 					</aside>
 				</section>
 
@@ -1480,7 +1549,7 @@
           <ul style="font-size: .7em; column-count:2; list-style-position: inside;">
             <li><a href="https://www.soasta.com/blog/google-mobile-web-performance-study/">Google Mobile Perf Study Results</a></li>
             <li><a href="https://blog.codinghorror.com/progressive-image-rendering/">Progressive Rendering</a></li>
-            <li><a href="https://www.youtube.com/watch?v=k4Xkpawt1EU">Putting your Images on a Diet [Video]</a></li>
+            <li><a href="https://www.youtube.com/watch?v=k4Xkpawt1EU">Putting your Images on a Diet</a></li>
             <li><a href="https://developers.google.com/speed/webp/docs">WebP Documentation</a></li>
             <li><a href="https://www.youtube.com/watch?v=NdOqr9C8UJ8">Video on WEBP</a></li>
             <li><a href="https://sewelldirect.com/learning-center/what-is-deep-color">Deep Color</a></li>
@@ -1488,7 +1557,7 @@
             <li><a href="http://flif.info/example.html">FLIF Format</a></li>
             <li><a href="http://socialcompare.com/en/comparison/image-file-formats">Comparing File Formats</a></li>
             <li><a href="http://blog.imgur.com/2014/10/09/introducing-gifv/">Introducing GIFV</a></li>
-            <li><a href="http://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/">Social Media Image Sizes Cheat Sheet</a></li>
+            <li><a href="http://makeawebsitehub.com/social-media-image-sizes-cheat-sheet/">Social Media Sizes Cheat Sheet</a></li>
             <li><a href="https://css-tricks.com/the-blur-up-technique-for-loading-background-images/">"Blur-Up" Technique</a></li>
             <li><a href="https://jmperezperez.com/medium-image-progressive-loading-placeholder/">Medium's Image Loading Technique</a></li>
             <li><a href="https://daverupert.com/2015/12/intrinsic-placeholders-with-picture/">Intrinsic Placeholders</a></li>
