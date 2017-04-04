@@ -1,31 +1,31 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/joyof.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/joyof.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  </head>
+  <body>
+  <div class="reveal">
 
       <!-- Intro -->
-			<div class="slides">
+  <div class="slides">
 
         <section>
           <img src="img/joyofoptimizing-intro.svg" alt="">
@@ -41,7 +41,7 @@
             - When preparing for this presentation I tried to put myself in the shoes of Bob Ross as much as possible
           </aside>
         </section>
-				<section data-background="img/Bob_Ross_Una.jpg">
+  <section data-background="img/Bob_Ross_Una.jpg">
           <aside class="notes" data-markdown>
             - It didn't really work.
             - I have like a weird beard growing out of my neck
@@ -50,17 +50,26 @@
           </aside>
         </section>
 
-				<section data-background="img/intro/speakersammy.png">
+  <section data-background="img/intro/speakersammy.png">
           <h1 class="blank-space">@una</h1>
           <div class="section--half" style="opacity: 0"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
           <div class="section--half" style="opacity: 0" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
-        </section>
+  <aside class="notes" data-markdown>
+  - This is me! I work at a company called DigitalOcean
+  - A cloud infrastructure provider that focuses on simplicity and user experience
+  - I do a bit of conference speaking
+  - but This is my first time on this stage
+  - (I hope they don't kick me out for that weird last slide)
+  - I'm very interested in making the web beautiful, but also how we can make the web beautiful while keeping it performant and accessible
+  - that's the real goal
+  </aside>
+  </section>
 
-				<section>
+  <!-- <section>
           <h1 class="blank-space">@una</h1>
           <div class="section--half"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
           <div class="fragment section--half" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
-        </section>
+        </section> -->
 
         <section data-background-color="#004236">
           <h1>Images on the Web</h1>
@@ -102,8 +111,8 @@
           <h1>Irresponsible Imaging</h1>
           <aside class="notes" data-markdown>
             - We're at a phase where we can send images without thinking of the consequences
-						- We can take a series of photos without thinking much about it
-						- And this turns into pedabytes of data -- it adds up
+  - We can take a series of photos without thinking much about it
+  - And this turns into pedabytes of data -- it adds up
           </aside>
         </section>
 
@@ -117,20 +126,23 @@
         <section data-background-image="img/angrycat.gif">
         </section>
 
-				<section>
-					<img src="img/sowhat.svg" alt="">
+  <section>
+  <img src="img/sowhat.svg" alt="">
           <aside class="notes">
             - so what? devices are getting better,
             - network speeds are improving
             - and the classic: it works on my system
           </aside>
-				</section>
+  </section>
 
         <section data-background="img/CwQhZ0aWcAAgLpe.jpg">
           <aside class="notes" data-markdown>
             - 5 months ago, for the first time ever, Mobile+tablet usage has eclipsed desktop usage
             - Google study from September 2016
             - surveyed over 10,000 mobile websites on 3G
+  - lets play a game
+  - it involves me asking you questions, and you yelling an answer out, so im going to need your help
+  - can we practice yelling out numbers
           </aside>
         </section>
 
@@ -153,6 +165,7 @@
           <img src="img/top10internetusers.jpg" alt="">
           <small class="source"><a href="http://www.internetlivestats.com/internet-users-by-country/">internetlivestats</a></small>
           <aside class="notes" data-markdown>
+  - Ethan mentioned "The Next Billion" yesterday, here are some numbers behind that
             - India is the second-largest online market ranked only behind China and the United States
             - India has almost double the users of the US
             - and this number has grown so fast. Just 3 years ago it was ranked behind the US</aside>
@@ -175,6 +188,18 @@
           <aside class="notes">Only 34.8% of the country is online. That's a *huge* market potential as this number grows expontentially. This is the future of the web</aside>
         </section>
 
+  <section data-background-image="img/ethan.jpg">
+  <b></b>
+  <aside class="notes" data-markdown>
+  - ethan brought up yesterday, this entire idea of thinking outside of our own experience
+  - what if someone doesn't browse the way I do?
+  - If you travel a lot, you definitely feel this pain.
+  - Even going to Australia or being on conference wifi, you can feel the pain.
+  - Thats why I think travel is so important.
+  - Travel allows you empathize with your people in ways that you can't really imagine ahead of time until you're there
+  </aside>
+  </section>
+
         <section>
           <img src="img/avgspeed-header.jpg" alt="">
           <img src="img/avgspeed-usa.jpg" alt="">
@@ -182,49 +207,40 @@
           <img class="fragment" src="img/avgspeed-india.jpg" alt="">
           <small class="source"><a href="https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds">Wikipedia</a></small>
           <aside class="notes">Now those usage and growth stats are stark when you compare it to web speeds that people have to put up with</aside>
-				</section>
+  </section>
 
-				<section data-background-color="yellow">
+  <section data-background-color="yellow">
           <h1>Access to information should be a basic human right</h1>
           <aside class="notes" data-markdown>
             - by not paying attention to performance, we're restricting access to information for people who don't have the fast connections we're so used to
             - performance isn't an enhancement, it's your user experience. it's a core part of your product.
-						- "Access to information should be a basic human right", or as Bob Ross says...
+  - "Access to information should be a basic human right", or as Bob Ross says...
           </aside>
         </section>
 
-				<section class="quote-slide">
+  <section class="quote-slide">
            <blockquote>
              "You can have anything you want in the world — once you help everyone around you get what they want."
              <footer>&mdash; Bob Ross</footer>
            </blockquote>
          </section>
 
-				<section>
-					<aside class="notes">
-					- If you travel a lot, you definitely feel this pain.
-					- Even going to Australia or being on conference wifi, you can feel the pain.
-					- Thats why I think travel is so important.
-					- Travel allows you empathize with your people in ways that you can't really imagine ahead of time until you're there
-					</aside>
-				</section>
+  <section>
+  <img src="img/sareh-1.jpg" alt="">
+  <aside class="notes" data-markdown>
+  - This is Sareh, a London-basd web developer I follow who recently went on holiday to Iran
+  - and due to a less-speedy wifi connection, along with a timeout to enter a verification code,
+  - she couldn't even Log IN to github or slack
+  - how can you get work done?
+  </aside>
+  </section>
 
-				<section>
-					<img src="img/sareh-1.jpg" alt="">
-					<aside class="notes" data-markdown>
-						- This is Sareh, a London-basd web developer I follow who recently went on holiday to Iran
-						- and due to a less-speedy wifi connection, along with a timeout to enter a verification code,
-						- she couldn't even Log IN to github or slack
-						- how can you get work done?
-					</aside>
-				</section>
-
-				<section>
-					<img src="img/sareh-2.jpg" alt="">
-					<aside class="notes">
-						She also found images to be a big problem
-					</aside>
-				</section>
+  <section>
+  <img src="img/sareh-2.jpg" alt="">
+  <aside class="notes">
+  She also found images to be a big problem
+  </aside>
+  </section>
 
         <section>
           <h2>Http Archive Data</h2>
@@ -237,9 +253,9 @@
 
         <section>
           <h1>66% Images</h1>
-					<aside class="notes">
-						- This has gone up 2% since 5 months ago, and avg. size up 60kb since then
-					</aside>
+  <aside class="notes">
+  - This has gone up 2% since 5 months ago, and avg. size up 60kb since then
+  </aside>
         </section>
 
         <section>
@@ -249,12 +265,12 @@
           </aside>
         </section>
 
-				<section class="quote-slide">
-					 <blockquote>
-						 "You can't be a web performance expert without being an image expert."
-						 <footer>&mdash; Tobin Titus (ImageCon 2017)</footer>
-					 </blockquote>
-				 </section>
+  <section class="quote-slide">
+   <blockquote>
+   "You can't be a web performance expert without being an image expert."
+   <footer>&mdash; Tobin Titus (ImageCon 2017)</footer>
+   </blockquote>
+   </section>
 
         <!-- Section Two: Image Types - Understanding your Canvas -->
 
@@ -376,6 +392,14 @@
           <aside class="notes">also pattern dither kind of reminds me of cross-stitching</aside>
         </section>
 
+  <section>
+  <img style="width: 80%" src="img/imgfromaeasea.jpg" alt="">
+  <aside class="notes">
+  - here's a nice example of pattern dither i stole from Chris Lewis on Twitter from yesterday
+  - He knows whats up
+  </aside>
+  </section>
+
         <section>
           <div class="section--half">
             <h1>GIF</h1>
@@ -390,7 +414,6 @@
               <li class="fragment">PNG-8 (256 Colors)</li>
               <li class="fragment">PNG-24 (True Color)</li>
               <li class="fragment">Alpha Transparency</li>
-              <li class="fragment">Delta Encoding</li>
             </ul>
           </div>
 
@@ -401,9 +424,17 @@
             </aside>
         </section>
 
-				<section data-background-color="RGB(17, 149, 148)">
+  <section data-background-color="RGB(17, 149, 148)">
           <h1>Lossless v. Lossy</h1>
-          <aside class="notes" data-markdown>
+          <h2 class="fragment"><span style="color: #080835">eeeeeehhhbbbbki</span></h2>
+  <h2 class="fragment">lossless:<span style="color: #080835"> e6h3b4ki</span></h2>
+  <h2 class="fragment">lossy: <span style="color: #080835">eeehhbki</span></h2>
+  </section>
+
+        <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
+          <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
+          <div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
+  <aside class="notes" data-markdown>
             - PNG is an example of lossless compression, it doesn't lose quality.
             - PNG uses delta compression
             - difference of one pixel to another (bc most images have large areas of similar color)
@@ -411,12 +442,6 @@
             - jpg also looks at difference of one pixel to another and discards the excess (it rounds where it can)
             - everytime you resave a jpg, even at 100% quality, it will lose detail
           </aside>
-				</section>
-
-        <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
-          <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
-          <div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
-          <!--<img src="img/screenshot-comparison.jpg" alt="">-->
         </section>
 
         <section>
@@ -430,25 +455,25 @@
           </aside>
         </section>
 
-				<section>
-					<img src="img/huetzli.png" style="width: 40%" alt="">
-					<h1>Guetzli Compression</h1>
-					<aside class="notes" data-markdown>
-						- and people are continuing to iterate on JPEG because its so widely used
-						- Google *just* released Guetzli, a new open source algorithm last month
-						- claims to produce high quality JPEG images, compressed 35% smaller than currently available method
-					</aside>
-				</section>
+  <section>
+  <img src="img/huetzli.png" style="width: 40%" alt="">
+  <h1>Guetzli Compression</h1>
+  <aside class="notes" data-markdown>
+  - and people are continuing to iterate on JPEG because its so widely used
+  - Google *just* released Guetzli, a new open source algorithm last month
+  - claims to produce high quality JPEG images, compressed 35% smaller than currently available method
+  </aside>
+  </section>
 
-				<section>
-					<img src="img/guetzli1.png" style="width: 100%" alt="">
-					<aside class="notes" data-markdown>
-						- targets the quantization stage in which the more visual quality loss is introduced
-						- one on the right is guetzli, center is normal png compression
-						- Guetzli’s psychovisual model, which approximates color perception and visual masking in a more thorough and detailed way than what is achievable by simpler color transforms and the discrete cosine transform
-						- tradeoff: they take longer to compress
-					</aside>
-				</section>
+  <section>
+  <img src="img/guetzli1.png" style="width: 100%" alt="">
+  <aside class="notes" data-markdown>
+  - targets the quantization stage in which the more visual quality loss is introduced
+  - one on the right is guetzli, center is normal png compression
+  - Guetzli’s psychovisual model, which approximates color perception and visual masking in a more thorough and detailed way than what is achievable by simpler color transforms and the discrete cosine transform
+  - tradeoff: they take longer to compress
+  </aside>
+  </section>
 
         <section>
           <div class="section--third">
@@ -467,7 +492,7 @@
             <h2>10%<br><span style="color:#d69">56 KB</h2>
           </div>
           <aside class="notes" data-markdown>
-						- these examples are from the current standard compression (not Guetzli)
+  - these examples are from the current standard compression (not Guetzli)
             - histograms: fewer colors on lower qualities
             - spikes still stand out, but the general area in that graph is decreased as
             - "in between colors" are removed
@@ -530,7 +555,7 @@
           </aside>
         </section>
 
-				<section>
+  <section>
           <h1>JPEG 2000</h1>
           <img src="img/caniuse--jpeg2000.jpg" alt="">
         </section>
@@ -698,7 +723,7 @@
           </ol>
         </section>
 
-				<section>
+  <section>
           <code>mogrify -format webp *.jpg</code>
         </section>
 
@@ -759,7 +784,7 @@
 
         <section data-background-color="RGB(63, 63, 63)">
           <pre><code style="padding: 1em 0 1em 1em; font-size: 1.9rem;
-					    line-height: normal;">&lt;video&gt;
+      line-height: normal;">&lt;video&gt;
   &lt;source src="src/video.mp4"
           type='video.mp4;
           codecs="avc1.42E01E, mp4a.40.2"'/&gt;
@@ -869,9 +894,9 @@
           <h1>Solutions and Protips</h1>
         </section>
 
-				<section>
-					<img src="img/automation.svg" alt="">
-				</section>
+  <section>
+  <img src="img/automation.svg" alt="">
+  </section>
 
         <section>
             <img src="img/Imagemagick-logo.png" alt="ImageMagick">
@@ -898,10 +923,10 @@
 
         <!-- Section Four: Semi-Automatic Image Optimization -->
 
-				<section>
-					<img src="img/semiautomation.svg" alt="">
+  <section>
+  <img src="img/semiautomation.svg" alt="">
           <aside class="notes">this section is all about tools -- 3 tools to be exact</aside>
-				</section>
+  </section>
 
         <section>
           <h2>ImageAlpha</h2>
@@ -931,9 +956,9 @@
 
         <!-- Section Five: Manual Image Optimization -->
 
-				<section>
-					<img src="img/manual.svg" alt="">
-				</section>
+  <section>
+  <img src="img/manual.svg" alt="">
+  </section>
 
         <section>
           <img src="img/website-mock.png" alt="" style="border: 3px solid #222;">
@@ -1020,16 +1045,21 @@
           </aside>
         </section>
 
+  <section>
+  <h1>"Blur Up"</h1>
+  <aside class="notes">this is called the "blur up" technique -- there are a lot of articles on the web w/resources and plugins to help with it depending on your configuration</aside>
+  </section>
+
         <section>
-					<div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
-					<div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
+  <div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
+  <div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
           <a href="#" class="source">Codinghorror Blog</a>
           <aside class="notes">
-            - if you've heard of progressive JPGs, you kind of get this for free with those
-            - explain progressive JPGs
-            - also improve percieved performance but won't be nearly as fast to initially render as this technique, bc theyre still relatively big
+  - some people compare this to progrssiv JPGs
+  - explain progressive JPGs
+            - progressive JPGS also improve percieved performance but won't be nearly as fast to initially render as the blur up technique, bc theyre still relatively big
           </aside>
-				</section>
+  </section>
 
         <section data-background-image="img/progressive.jpg">
           <aside class="notes">
@@ -1037,7 +1067,7 @@
           </aside>
         </section>
 
-				<section data-background-image="img/bg1.jpg">
+  <section data-background-image="img/bg1.jpg">
           <h1 class="blank-space">Protip: Embrace Blur</h1>
         </section>
 
@@ -1088,32 +1118,48 @@
             <div class="section--third"><figure class="walden"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Walden</h3></div>
         </section>
 
-				<style>
-				.color-me {
-					position: relative;
-				}
+  <style>
+  .color-me {
+  position: relative;
+  }
 
-				.color-1::after,
-				.color-2::after,
-				.color-3::after,
-				.color-4::after,
-				.color-5::after,
-				.color-6::after,
-				.color-7::after,
-				.color-8::after,
-				.color-9::after,
-				.color-10::after {
-					content: '';
-					display: block;
-					margin-left: 2.5%;
-					width: 95%;
-					height: calc(100% - .4em);
-					position: absolute;
-					top: 0; left: 0;
-				}
-				</style>
+  .color-1::after,
+  .color-2::after,
+  .color-3::after,
+  .color-4::after,
+  .color-5::after,
+  .color-6::after,
+  .color-7::after,
+  .color-8::after,
+  .color-9::after,
+  .color-10::after,
+  .color-d::after,
+  .color-e::after,
+  .color-f::after,
+  .color-c::after,
+  .color-h::after,
+  .color-o::after,
+  .color-l::after {
+  content: '';
+  display: block;
+  margin-left: 2.5%;
+  width: 95%;
+  height: calc(100% - .4em);
+  position: absolute;
+  top: 0; left: 0;
+  }
+  </style>
 
-				<section>
+  <section>
+  <h1>CSS Blend Modes</h1>
+  <aside class="notes" data-markdown>
+  - we're going to take a slight aside (but its not really an aside) to talk about blend modes
+  - blend modes are really exciting and more people should know about how powerful they are
+  - so lets do a breif primer on them
+  </aside>
+  </section>
+
+  <section>
           <div class="section--half color-me color-1"><img src="img/test-bw.jpeg" alt=""></div>
           <div class="section--half">
           	<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
@@ -1121,193 +1167,246 @@
   background: hotpink;
   mix-blend-mode: multiply;
 }
-						</style>
-          </div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-            - add z-index: -1
-						- do luminosity
-					</aside>
-        </section>
+  </style>
 
-				<section>
-					<div class="section--half color-me color-2"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">A * B</p>
+          </div>
+  <aside class="notes" data-markdown>
+    multiplies luminosity values
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-2"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-2::after {
   background: hotpink;
   mix-blend-mode: screen;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">1-(1-A)*(1-B)</p>
+  </div>
+  <aside class="notes" data-markdown>
+    opposite of multiply, multiplies the light values
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-3"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-d"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-d::after {
+  background: hotpink;
+  mix-blend-mode: darken;
+}
+  </style>
+  <p style="margin-top: 1em; font-family: monospace; background: rgb(10, 200, 50)">rgb(10, 200, 50)</p>
+  <p style="font-family: monospace; background: rgb(150, 100, 150)">rgb(150, 100, 150)</p>
+  <p style="font-family: monospace">----------------</p>
+  <p style="font-family: monospace; background: rgb(10, 100, 50)">rgb(10, 100, 50)</p>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-l"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-l::after {
+  background: hotpink;
+  mix-blend-mode: lighten;
+}
+  </style>
+  <p style="margin-top: 1em; font-family: monospace; background: rgb(10, 200, 50)">rgb(10, 200, 50)</p>
+  <p style="font-family: monospace; background: rgb(150, 100, 150)">rgb(150, 100, 150)</p>
+  <p style="font-family: monospace">----------------</p>
+  <p style="font-family: monospace; background: rgb(150, 200, 150)">rgb(150, 200, 150)</p>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-3"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-3::after {
   background: hotpink;
   mix-blend-mode: difference;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-4"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-e"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-e::after {
+  background: hotpink;
+  mix-blend-mode: exclusion;
+}
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-f"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-f::after {
+  background: hotpink;
+  mix-blend-mode: color-burn;
+}
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">1−(1−B)÷A</p>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-c"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-c::after {
+  background: hotpink;
+  mix-blend-mode: color-dodge;
+}
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">B÷(1−A)</p>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-4"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-4::after {
   background: hotpink;
   mix-blend-mode: soft-light;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">screen & multiply</p>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-5"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-h"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-h::after {
+  background: hotpink;
+  mix-blend-mode: hard-light;
+}
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">color-dodge & color-burn</p>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-o"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+.color-o::after {
+  background: hotpink;
+  mix-blend-mode: overlay;
+}
+  </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">screen & multiply</p>
+  </div>
+  <aside class="notes" data-markdown>
+    similar to soft-light, but midtones are transparent (in soft-light, they're gray, so they look more muted)
+  </aside>
+  </section>
+
+  <section>
+  <div class="section--half color-me color-5"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-5::after {
   background: linear-gradient(to left, red, yellow);
-  mix-blend-mode: soft-light;
+  mix-blend-mode: overlay;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
 
-				<section>
-					<div class="section--half color-me color-6"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-6"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-6::after {
   background: linear-gradient(to left, red, blue);
   mix-blend-mode: exclusion;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-7"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-7"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-7::after {
   background: linear-gradient(to left, red, blue);
   mix-blend-mode: color;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-8"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-8"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-8::after {
   background: linear-gradient(to left, red, blue);
   //mix-blend-mode: color;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-9"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-9"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-9::after {
   background: linear-gradient(to left, red, blue);
   //mix-blend-mode: color;
   z-index: -1;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<div class="section--half color-me color-10"><img src="img/test-bw.jpeg" alt=""></div>
-					<div class="section--half">
-						<style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
+  <section>
+  <div class="section--half color-me color-10"><img src="img/test-bw.jpeg" alt=""></div>
+  <div class="section--half">
+  <style contenteditable style="font-family: monospace; text-align: left; display:block; white-space: pre-wrap; font-size: 1.6rem; outline: 1px solid #888;">
 .color-10::after {
   background: linear-gradient(to left, red, blue);
   //mix-blend-mode: color;
@@ -1317,38 +1416,31 @@
 .color-10 img {
   mix-blend-mode: luminosity;
 }
-						</style>
-					</div>
-					<aside class="notes" data-markdown>
-						- show some other blend modes
-						- can use solid colors, or gradients
-						- linear-gradient(to left, red, yellow)
-						- stop at color
-						- Blend modes & filters are awesome, and support is gaining traction but its not fully there yet
-						- add z-index: -1
-						- do luminosity
-					</aside>
-				</section>
+  </style>
+  </div>
+  <aside class="notes" data-markdown>
+  </aside>
+  </section>
 
-				<section>
-					<h1>Mix Blend Mode</h1>
-					<img src="img/caniuse--mix-blend.jpg" alt="">
-				</section>
+  <section>
+  <h1>Mix Blend Mode</h1>
+  <img src="img/caniuse--mix-blend.jpg" alt="">
+  </section>
 
-				<section>
-					<h1>Background Blend</h1>
-					<img src="img/caniuse--bg-blend.jpg" alt="">
-				</section>
+  <section>
+  <h1>Background Blend</h1>
+  <img src="img/caniuse--bg-blend.jpg" alt="">
+  </section>
 
-				<section>
-					<img src="img/blend-painting-info.jpg" alt="">
-					<aside class="notes" data-markdown>
-						- CSStriggers.com is great site that shows how CSS affects render perf
+  <section>
+  <img src="img/blend-painting-info.jpg" alt="">
+  <aside class="notes" data-markdown>
+  - CSStriggers.com is great site that shows how CSS affects render perf
             - Blend modes will take some additional time to repaint the page
-						- But is that rendering time bigger than the size savings?
+  - But is that rendering time bigger than the size savings?
             - lets benchmark (click)
           </aside>
-				</section>
+  </section>
 
         <section data-background="yellow">
           <h2>Warning: this study is inherently bias and has a small sample size</h2>
@@ -1545,7 +1637,7 @@
         <section>
           780 / 1560 = 50%
           <aside class="notes" data-markdown>
-            - we could just save them all down to match that final biggest image (even though there is only just one)
+  - we can scale down our images by half to fit into their containers
           </aside>
         </section>
 
@@ -1556,12 +1648,15 @@
 
         <section>
           <code>mogrify ./ -resize 50%</code>
-          <aside class="notes" data-markdown>since we have imagemagick installed, we can use mogrify -- this is sort of lazy overall improvements</aside>
+          <aside class="notes" data-markdown>
+  - since we have imagemagick installed, we can use mogrify -- this is sort of lazy overall improvements</aside>
         </section>
 
         <section>
           <h1>"Save Retina Images @2x the Size"</h1>
           <aside class="notes" data-markdown>
+  - the ppl who built Mixin didn't arbitrarily pick that value
+  - they took the GCD image size and doubled it for retina screens
             - advice we hear, but i kind of want to challenge this
           </aside>
         </section>
@@ -1598,7 +1693,7 @@
         <section data-background-image="img/mixin/userimage.jpg">
         </section>
 
-				<section data-background-color='RGB(17, 149, 148)'>
+  <section data-background-color='RGB(17, 149, 148)'>
           <h1>1.1 MB to 500 KB</h1>
           <aside class="notes" data-markdown>
             Just from saving the speaker images to their max size, we save 0.6 MB on the intitial download of the site for your user.
@@ -1612,12 +1707,6 @@
             - literally saving your users money because they won't need to download 600KB of data
           </aside>
         </section>
-
-				<section data-background-image="../img/aea-homepage.jpg">
-					<aside class="notes">
-						What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
-					</aside>
-				</section>
 
         <section data-background-color="black">
           <h1>Step 2: Consider Image Format</h1>
@@ -1641,9 +1730,15 @@
           <aside class="notes" data-markdown>smaller quality on smaller, less important images, consider compressive images</aside>
         </section>
 
+  <section data-background-image="../img/aea-homepage.jpg">
+  <aside class="notes">
+  What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
+  </aside>
+  </section>
+
         <section data-background-color="RGB(63, 63, 63)">
             <pre><code style="padding: 1em; font-size: 1.9rem;
-						    line-height: normal;">&lt;picture&gt;
+      line-height: normal;">&lt;picture&gt;
   &lt;source
     media="(min-width: 800px)"
     srcset="images/tree@2x.png"&gt;
@@ -1656,8 +1751,8 @@
 &lt;/picture&gt;</code></pre>
           <aside class="notes" data-markdown>
             - In the end, If you want to send really high quality assets, please use the picture element
-            - if you're not concerned about performance, or care about humans getting access to your data around the world (where many are exclusively on mobile devices),
-            - even if your audience is entirely 24-year-old techies w/Macbooks, you still need to consider mobile performance</aside>
+            - if you're not concerned about performance, data access around the world (where many ppl are exclusively on mobile devices),
+            - even if your audience is entirely 24-year-old techies w/fast internet and Macbooks, you still need to consider mobile performance</aside>
         </section>
 
         <section>
@@ -1695,12 +1790,12 @@
           </ul>
         </section>
 
-				<section>
-					<img src="img/balance.svg" alt="">
-					<aside class="notes" data-markdown>
+  <section>
+  <img src="img/balance.svg" alt="">
+  <aside class="notes" data-markdown>
             - while this talk was a little heavy-handed on the optimization end, find balance
-					</aside>
-				</section>
+  </aside>
+  </section>
 
         <!-- End Quote -->
         <!--<section class="quote-slide">
@@ -1761,31 +1856,31 @@
             <li><a href="https://webkit.org/blog/6784/new-video-policies-for-ios/">iOS Video Autoplay News</a></li>
             <li><a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/">Facebook Image Loading Technique</a></li>
             <li><a href="http://scottjehl.github.io/picturefill/">Picturefill</a></li>
-						<li><a href="https://research.googleblog.com/2017/03/announcing-guetzli-new-open-source-jpeg.html">Guetzli Compression</a></li>
+  <li><a href="https://research.googleblog.com/2017/03/announcing-guetzli-new-open-source-jpeg.html">Guetzli Compression</a></li>
           </ul>
         </section>
-			</div>
-		</div>
+  </div>
+  </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				transition: 'none',
+  <script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  history: true,
+  transition: 'none',
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
+  // More info https://github.com/hakimel/reveal.js#dependencies
+  dependencies: [
+  { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: '../node_modules/caniuse-component/caniuseComponent/scripts.js', async: true },
           { src: '../node_modules/caniuse-component/caniuseComponent/style.css' }
-				]
-			});
+  ]
+  });
 
       // Click scripts
       var overlappers = document.querySelectorAll('.can-overlap');
@@ -1796,6 +1891,6 @@
           this.classList.toggle('is-overlapped');
         })
       })
-		</script>
-	</body>
+  </script>
+  </body>
 </html>

@@ -84,6 +84,10 @@
 					padding: 10px 16px;
 					padding-bottom: 20px;
 					cursor: pointer;
+					position: absolute;
+					left: 0;
+					width: 40%;
+					bottom: 0;
 				}
 
 				.speaker-controls-time .reset-button {
@@ -153,18 +157,18 @@
 	<body>
 
 		<div id="current-slide"></div>
+		<div class="speaker-controls-time">
+			<h4 class="label">Time <span class="reset-button">Click to Reset</span></h4>
+			<div class="clock">
+				<span class="clock-value">0:00 AM</span>
+			</div>
+			<div class="timer">
+				<span class="hours-value">00</span><span class="minutes-value">:00</span><span class="seconds-value">:00</span>
+			</div>
+			<div class="clear"></div>
+		</div>
 		<div id="upcoming-slide"><span class="label">UPCOMING:</span></div>
 		<div id="speaker-controls">
-			<div class="speaker-controls-time">
-				<h4 class="label">Time <span class="reset-button">Click to Reset</span></h4>
-				<div class="clock">
-					<span class="clock-value">0:00 AM</span>
-				</div>
-				<div class="timer">
-					<span class="hours-value">00</span><span class="minutes-value">:00</span><span class="seconds-value">:00</span>
-				</div>
-				<div class="clear"></div>
-			</div>
 
 			<div class="speaker-controls-notes hidden">
 				<h4 class="label">Notes</h4>
