@@ -51,9 +51,7 @@
         </section>
 
   <section data-background="img/intro/speakersammy.png">
-          <h1 class="blank-space">@una</h1>
-          <div class="section--half" style="opacity: 0"><img style="width: 70%; margin: -50px auto; display: block;" src="img/intro/atxsass-logo.png" alt=""><img style="width: 70%; margin: -160px auto; display: block;" src="img/intro/sassydc-logo.svg" alt=""></div>
-          <div class="section--half" style="opacity: 0" style="margin: 130px 0 0;"><img src="img/intro/toolsday.png" alt=""></div>
+      <h1 style="margin-top: -320px;" class="blank-space">@una</h1>
   <aside class="notes" data-markdown>
   - This is me! I work at a company called DigitalOcean
   - A cloud infrastructure provider that focuses on simplicity and user experience
@@ -104,13 +102,19 @@
           <aside class="notes" data-markdown>
             - This is where we are now.
             - Now the cameras we have with us take 12MP photos (iPhone 7 specs)
+            - I want everyone to do me a favor, get your phone out, and take a selfie
+            - i love selfies
+            - if you dont like selfies, you can take an "everyone-elsie" like Jeremy showed us
+            - On an avg iPhone 6, the photo size is 2.6 MB
+            - Thats twice as big as the recommended initial content render on a website (which is 1MB for usable conent)
+            - We've just introduced 910 MB of photos into this world -- and thats if you only took *one* photo
           </aside>
         </section>
 
         <section>
           <h1>Irresponsible Imaging</h1>
           <aside class="notes" data-markdown>
-            - We're at a phase where we can send images without thinking of the consequences
+            - We're at a phase where we can take and send images without thinking of the consequences
   - We can take a series of photos without thinking much about it
   - And this turns into pedabytes of data -- it adds up
           </aside>
@@ -191,7 +195,8 @@
   <section data-background-image="img/ethan.jpg">
   <b></b>
   <aside class="notes" data-markdown>
-  - ethan brought up yesterday, this entire idea of thinking outside of our own experience
+  - so we need to start thinking this way
+  - embracing this entire idea of thinking outside of our own experience
   - what if someone doesn't browse the way I do?
   - If you travel a lot, you definitely feel this pain.
   - Even going to Australia or being on conference wifi, you can feel the pain.
@@ -265,7 +270,7 @@
           </aside>
         </section>
 
-  <section class="quote-slide">
+  <section>
    <blockquote>
    "You can't be a web performance expert without being an image expert."
    <footer>&mdash; Tobin Titus (ImageCon 2017)</footer>
@@ -325,9 +330,10 @@
           <div class="section--fourth"><img src="img/tree-01.jpg" alt=""><p>jpeg<br>41 kB</p></div>
           <div class="section--fourth"><img src="img/tree-01.svg" alt=""><p>svg<br>7 kB</p></div>
           <aside class="notes" data-markdown>
-            - different images are better suited to different format Types
-            - why? bc these different format types compress & store image data differently
+            - we all probably realize that different images are better suited to different format types
+            - But why is that? Its bc these different format types compress & store image data differently
             - each has pros/cons & its important to understand these
+            - with images of large blocks of similar colors we see very different results than images with a lot of unique pixel data
           </aside>
         </section>
 
@@ -448,8 +454,12 @@
           <img style="width: 100%" src="img/jpegcompression.jpg" alt="">
           <aside class="notes" data-markdown>
             - jpg is really smart, it goes through a several-step process for compression
-            - what quality level / compression level determins the quantization table used
-            - convert to a new, compressed value
+            - first it breaks up RGB into black and white (Y), red chroma (red-green), and blue chroma channels (blue-yellow)
+            - goes through DCT to create 64 coefficients within this 8 pixel grid
+            - then, goes through quantization -- which is based on a lookup-table corresponsing to image quality that you set when saving the jpg
+            - convert to a new, compressed value, it's where the most visual information is lost
+            - The upper left corner is the DC coefficient, which is just the unweighted average, and the others are called the AC coefficients, which really represent the difference in color detail
+            - Runs through another algorithm to find averages and recompile color information and resaves the image
             - saves space on the server
             - lossy isn't a bad thing
           </aside>
@@ -480,6 +490,7 @@
   <section>
   <div class="section--half"><img src="img/guetzliexq.png" alt=""></div>
   <div class="section--half"><img src="img/guetzliex2.png" alt=""></div>
+  <a href="http://cloudinary.com/blog/a_closer_look_at_guetzli" class="source">Cloudinary</a>
   <aside class="notes" data-markdown>
   - there was an article that came out yesterday from Eric Portis at Cloudinary that looked more closely into this
   - he compared a few examples, and saw that Guetzli
@@ -1164,7 +1175,8 @@
   <aside class="notes" data-markdown>
   - we're going to take a slight aside (but its not really an aside) to talk about blend modes
   - blend modes are really exciting and more people should know about how powerful they are
-  - so lets do a breif primer on them
+  - To me, they can really bring more color, uniformity, and art to the web -- something Jenn was also talking about in her talk
+  - so lets do a brief primer on them
   </aside>
   </section>
 
