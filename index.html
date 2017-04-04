@@ -8,6 +8,16 @@
 
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/joyof.css">
+<!-- 
+  <style>
+  section{
+    overflow: hidden;
+  }
+  b {
+    height: 90vh;
+    display: block;
+    width: 100vw;
+  }</style> -->
 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -128,6 +138,7 @@
         </section>
 
         <section data-background-image="img/angrycat.gif">
+          <b></b>
         </section>
 
   <section>
@@ -163,13 +174,15 @@
         </section>
 
         <section data-background-image="img/angrycat.gif">
+          <b></b>
         </section>
 
         <section>
           <img src="img/top10internetusers.jpg" alt="">
           <small class="source"><a href="http://www.internetlivestats.com/internet-users-by-country/">internetlivestats</a></small>
           <aside class="notes" data-markdown>
-  - Ethan mentioned "The Next Billion" yesterday, here are some numbers behind that
+            - Ethan mentioned "The Next Billion" yesterday, here are some numbers behind that
+            - Look at Nigeria, they have more internet users than the UK
             - India is the second-largest online market ranked only behind China and the United States
             - India has almost double the users of the US
             - and this number has grown so fast. Just 3 years ago it was ranked behind the US</aside>
@@ -386,10 +399,12 @@
         </section>
 
         <section data-background-image="img/dither-noise.jpg">
+          <b></b>
         <aside class="notes">different types of dithering also affect image size -- noise dither</aside>
         </section>
 
         <section data-background-image="img/dither-pattern.jpg">
+          <b></b>
         <aside class="notes">pattern dither is a little bit smaller</aside>
         </section>
 
@@ -435,6 +450,11 @@
           <h2 class="fragment"><span style="color: #080835">eeeeeehhhbbbbki</span></h2>
   <h2 class="fragment">lossless:<span style="color: #080835"> e6h3b4ki</span></h2>
   <h2 class="fragment">lossy: <span style="color: #080835">eeehhbki</span></h2>
+  <aside class="notes" data-markdown>
+     - here's a very basic illustration of the differences between the two
+     - explain
+     - everytime you resave a lossy image, like a jpg, even at 100% quality, it will lose detail
+  </aside>
   </section>
 
         <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
@@ -446,7 +466,6 @@
             - difference of one pixel to another (bc most images have large areas of similar color)
             - chooses the pixel closest in value (hoping to be 0) which decreases overall file size
             - jpg also looks at difference of one pixel to another and discards the excess (it rounds where it can)
-            - everytime you resave a jpg, even at 100% quality, it will lose detail
           </aside>
         </section>
 
@@ -478,31 +497,34 @@
   <section>
   <img src="img/guetzli1.png" style="width: 100%" alt="">
   <aside class="notes" data-markdown>
-  - targets the quantization stage in which the more visual quality loss is introduced
-  - one on the right is guetzli, center is normal png compressionv
-  - compression metric: Butteraugli
-  - uses the conccept of cells in the retina to make AI-based decisions in quantization
-  - tradeoff: works better at high quality image levels
-  - tradeoff: they take longer to compress and are unreliable
+  - one on the right is guetzli compression, center is normal png compression
+  - you can see very small differences in color, but its hard to see
+  - Guetzli uses an AI-based compression metric
+  - that incorporates the concept of cells in the retina to make decisions in quantization
+  - the quantization table changes per image with Guetzli, it's not an absolute set of values like it normally is
+  - tradeoff: images take longer to compress and results are unreliable
+  - especially true on smaller images (works best as larger sizes)
   </aside>
   </section>
 
   <section>
-  <div class="section--half"><img src="img/guetzliexq.png" alt=""></div>
-  <div class="section--half"><img src="img/guetzliex2.png" alt=""></div>
+  <div class="section--half"><img src="img/guetzliexq.png" alt=""><h3>173 KB</h3></div>
+  <div class="section--half"><img src="img/guetzliex2.png" alt=""><h3>167 KB</h3></div>
   <a href="http://cloudinary.com/blog/a_closer_look_at_guetzli" class="source">Cloudinary</a>
   <aside class="notes" data-markdown>
   - there was an article that came out yesterday from Eric Portis at Cloudinary that looked more closely into this
-  - he compared a few examples, and saw that Guetzli
+  - he compared a few examples, and saw that Guetzli saved images a bit more sharply than auto compression, which he compared it to
+  - q_auto is "automatic quality" within Cloudinary
   </aside>
   </section>
 
 
   <section>
-  <div class="section--half"><img src="img/guetzliex2q.png" alt=""></div>
-  <div class="section--half"><img src="img/guetzliex.png" alt=""></div>
+  <div class="section--half"><img src="img/guetzliex2q.png" alt=""><h3>118 KB</h3></div>
+  <div class="section--half"><img src="img/guetzliex.png" alt=""><h3>111 KB</h3></div>
   <aside class="notes" data-markdown>
   - in this example you can see that guetzli gets rid of some of the detail in the background
+  - the compression *is* smaller, but not 35% smaller
   </aside>
   </section>
 
@@ -528,7 +550,7 @@
             - histograms: fewer colors on lower qualities
             - spikes still stand out, but the general area in that graph is decreased as
             - "in between colors" are removed
-            - at a smaller size you can't really see a difference (but it makes a big differnce in image size)</aside>
+            - at a smaller size (what you're seeing from your seats) you can't really see a difference (but quality makes a rly big difference in image size)</aside>
         </section>
 
         <section>
@@ -617,7 +639,7 @@
               <li>Better compression algorithm than JPG</li>
             </ul>
             <aside class="notes" data-markdown>
-              - most promising new image format
+              - my be the most promising new image format
               - Developed Initially On2
               - Google Initiative now -- put a lot of work into this since 2010
               - lossy WebP also supports transparency, making it comparable & faster than png
@@ -650,7 +672,8 @@
           <h1>WebP</h1>
           <img src="img/caniuse--webp.jpg" alt="">
           <aside class="notes" data-markdown>
-            support isnt super strong, but Safari and Firefox are both experimenting with it right now, so thats a really big sign
+            - if you look at the support table its literally the opposite of the JPEG support tables
+            - However, Safari and Firefox are both experimenting with WebP right now, so thats a really big sign considering nobody agrees on anything when it comes to improving image formats
           </aside>
         </section>
 
@@ -829,6 +852,7 @@
         </section>
 
         <section data-background-image="img/explosion.gif">
+          <b></b>
           <aside class="notes">gif pattern diffusion!</aside>
         </section>
 
@@ -1128,7 +1152,7 @@
             </aside>
         </section>
 
-        <section>
+        <!--<section>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
           <style>
             figure:before, figure:after { height: 97% !important}
@@ -1137,7 +1161,7 @@
             <div class="section--third"><figure class="toaster"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Toaster</h3></div>
             <div class="section--third"><figure class="brannan"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Brannan</h3></div>
             <div class="section--third"><figure class="walden"><img style="max-width: 100%;" src="img/test-bw.jpeg" alt=""></figure><h3>Walden</h3></div>
-        </section>
+        </section>-->
 
   <style>
   .color-me {
@@ -1258,6 +1282,7 @@
   mix-blend-mode: difference;
 }
   </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">|A-B|</p>
   </div>
   <aside class="notes" data-markdown>
   </aside>
@@ -1272,6 +1297,7 @@
   mix-blend-mode: exclusion;
 }
   </style>
+  <p style="font-size: 1.5em; margin-top: 1em; font-family: monospace">|A-B|</p>
   </div>
   <aside class="notes" data-markdown>
   </aside>
@@ -1470,6 +1496,7 @@
         </section>
 
         <section data-background-image="img/comparisonload.jpg">
+          <b></b>
           <!--<img src="img/comparisonload.jpg" alt="">-->
         </section>
 
@@ -1492,6 +1519,7 @@
         </section>
 
         <section data-background-image="img/colored-jpg.jpg">
+          <b></b>
           <!--<img img style="width:120%; margin-left:-10%; max-width: 120%" src="img/colored-jpg.jpg" alt="">-->
           <aside class="notes" data-markdown>
             - Still renders faster to send a B&W image with a blend mode than an equivilant colored image pre-designed and saved in photoshop
@@ -1561,6 +1589,7 @@
         </section>
 
         <section data-background-image="img/deleting-frames.gif">
+          <b></b>
           <aside class="notes" data-markdown>
             - reminded me of my Jasc Animation Shop Days
           </aside>
@@ -1598,6 +1627,7 @@
         </section>
 
         <section data-background-image="img/excitedbabe.gif">
+          <b></b>
         <aside class="notes" data-markdown>
           - this is great news for gifv and autoplaying videos
           - headers with video background components
@@ -1631,6 +1661,7 @@
         </section>
 
         <section data-background-image="img/mixin/mixin.jpg">
+          <b></b>
         </section>
 
         <section data-background-color="black">
@@ -1639,21 +1670,27 @@
         </section>
 
         <section data-background-image="img/mixin/mixin.jpg">
+          <b></b>
         </section>
 
         <section data-background-image="img/mixin/joel-highlighted.jpg">
+          <b></b>
         </section>
 
         <section data-background-image="img/mixin/joel-sending.jpg">
+          <b></b>
         </section>
 
          <section data-background-image="img/mixin/joel-mobile-widest.jpg">
+           <b></b>
         </section>
 
         <section data-background-image="img/mixin/joel-mobile-sched.jpg">
+          <b></b>
         </section>
 
         <section data-background-image="img/mixin/final-biggest.jpg">
+          <b></b>
         </section>
 
         <section>
@@ -1684,16 +1721,19 @@
         </section>
 
         <section data-background-image="img/mixin/andy.jpg">
+          <b></b>
           <aside class="notes" data-markdown>If you can't really tell the difference on your retina display, your user sure as heck won't</aside>
         </section>
 
         <section data-background-image="img/mixin/andy-diff.jpg">
+          <b></b>
           <aside class="notes" data-markdown>
             this is the difference saving it down to that GCD size
           </aside>
         </section>
 
         <section data-background-image="img/mixin/andy-diff2.jpg">
+          <b></b>
           <aside class="notes" data-markdown>
             - since we don't actually need that size, this is at its greatest size of 660px
           </aside>
@@ -1707,6 +1747,7 @@
         </section>
 
         <section data-background-image="img/mixin/crew.jpg">
+          <b></b>
           <aside class="notes" data-markdown>
             There are other areas this can be improved too
           </aside>
@@ -1734,12 +1775,16 @@
 <pre><code style="padding: 1em; font-size: 1.9rem;
     line-height: normal;">&lt;img srcset=&quot;small.jpg 1x, large.jpg 2x&quot;&#10;   src=&quot;small.jpg&quot;&#10;   alt=&quot;info about image&quot; /&gt;
 </code></pre>
-<aside class="notes">
+<aside class="notes" data-markdown>
   - if you really, really want to send these high-res images at 2x
   - can use srcset to detect device-pixel-ratio
   - same support as picture as its a part of the same responsive images sepc,
   - determines resolution (1x or 2x) and send images this way
 </aside>
+        </section>
+
+        <section data-background-image="img/mixin/andy-diff2.jpg">
+        <aside class="notes">This example is the difference between sending a large file and sending a properly fitted file -- if you cant see the differences, your users definitely cant. And you're saving a ton in image sizes</aside>
         </section>
 
         <section data-background-color="black">
@@ -1765,6 +1810,7 @@
         </section>
 
   <section data-background-image="../img/aea-homepage.jpg">
+    <b></b>
   <aside class="notes">
   - What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
   </aside>
@@ -1794,8 +1840,8 @@
           <div class="section--half"><img style="margin-top:2.25em" src="img/criteo-mobile-commerce-report-q42014-6-638.jpg" alt=""></div>
 
           <aside class="notes" data-markdown>
-            - mobile design and speed was even *more* important for the high-end/luxury market
-            - In America, those users are more likely to shop on mobile devices and make quick decisions than wait and browse for the best deals on browsers
+            - and thats bc in the high-end/luxury market speed is even more important
+            - In America, those users are the ones more likely to shop on mobile devices and make quick decisions rather than wait and browse for the best deals on browsers
           </aside>
         </section>
 
