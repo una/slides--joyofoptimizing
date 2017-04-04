@@ -469,11 +469,32 @@
   <img src="img/guetzli1.png" style="width: 100%" alt="">
   <aside class="notes" data-markdown>
   - targets the quantization stage in which the more visual quality loss is introduced
-  - one on the right is guetzli, center is normal png compression
-  - Guetzli’s psychovisual model, which approximates color perception and visual masking in a more thorough and detailed way than what is achievable by simpler color transforms and the discrete cosine transform
-  - tradeoff: they take longer to compress
+  - one on the right is guetzli, center is normal png compressionv
+  - compression metric: Butteraugli
+  - uses the conccept of cells in the retina to make AI-based decisions in quantization
+  - tradeoff: works better at high quality image levels
+  - tradeoff: they take longer to compress and are unreliable
   </aside>
   </section>
+
+  <section>
+  <div class="section--half"><img src="img/guetzliexq.png" alt=""></div>
+  <div class="section--half"><img src="img/guetzliex2.png" alt=""></div>
+  <aside class="notes" data-markdown>
+  - there was an article that came out yesterday from Eric Portis at Cloudinary that looked more closely into this
+  - he compared a few examples, and saw that Guetzli
+  </aside>
+  </section>
+
+
+  <section>
+  <div class="section--half"><img src="img/guetzliex2q.png" alt=""></div>
+  <div class="section--half"><img src="img/guetzliex.png" alt=""></div>
+  <aside class="notes" data-markdown>
+  - in this example you can see that guetzli gets rid of some of the detail in the background
+  </aside>
+  </section>
+
 
         <section>
           <div class="section--third">
@@ -744,17 +765,6 @@
           <aside class="notes">
             - the picture element is some html magic that we can use instead, and we can use today
           </aside>
-        </section>
-
-        <section data-background-color="RGB(63, 63, 63)">
-<pre><code style="padding: 1em; font-size: 1.9rem;
-    line-height: normal;">&lt;picture&gt;
-  &lt;source type="image/webp"
-          srcset="img/happy-tree.webp"&gt;
-  &lt;img src="img/happy-tree.jpg"
-       alt="happy little tree"&gt;
-&lt;/picture&gt;
-</code></pre>
         </section>
 
         <section>
@@ -1050,25 +1060,24 @@
   <aside class="notes">this is called the "blur up" technique -- there are a lot of articles on the web w/resources and plugins to help with it depending on your configuration</aside>
   </section>
 
-        <section>
-  <div class="section--half"><img style="width:100%" src="img/jpeg-basic.gif" alt="">Baseline JPEG</div>
-  <div class="section--half"><img style="width:100%" src="img/jpeg-progressive.gif" alt="">Progressive JPEG</div>
-          <a href="#" class="source">Codinghorror Blog</a>
-          <aside class="notes">
-  - some people compare this to progrssiv JPGs
-  - explain progressive JPGs
-            - progressive JPGS also improve percieved performance but won't be nearly as fast to initially render as the blur up technique, bc theyre still relatively big
-          </aside>
-  </section>
-
-        <section data-background-image="img/progressive.jpg">
-          <aside class="notes">
-            can run a PS task for this change
-          </aside>
-        </section>
+      <section data-background-color="RGB(63, 63, 63)">
+        <h1>Placeholder Images</h1>
+    <pre><code style="padding: 1em; font-size: 1.9rem;
+    line-height: normal;">&lt;img alt=&quot;64x64&quot;
+    data-src="image.png"
+    width=&quot;64&quot; height=&quot;64&quot;
+    src=&quot;data:image/gif;base64,R0lGOD
+    lhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAAB
+    AAEAAAICRAEAOw==&quot;&gt;
+    </code></pre>
+    <aside class="notes">
+      - this technique is similar to placeholder images
+      - you can send a tiny placeholder data URI and use a data attribute to hook in an image on load
+    </aside>
+      </section>
 
   <section data-background-image="img/bg1.jpg">
-          <h1 class="blank-space">Protip: Embrace Blur</h1>
+          <h1 class="blank-space">Protip: Embrace the Blur</h1>
         </section>
 
         <section>
@@ -1657,7 +1666,7 @@
           <aside class="notes" data-markdown>
   - the ppl who built Mixin didn't arbitrarily pick that value
   - they took the GCD image size and doubled it for retina screens
-            - advice we hear, but i kind of want to challenge this
+            - advice we hear, but i kind of want to challenge this because of the performance implications
           </aside>
         </section>
 
@@ -1708,6 +1717,18 @@
           </aside>
         </section>
 
+        <section data-background-color="RGB(63, 63, 63)">
+<pre><code style="padding: 1em; font-size: 1.9rem;
+    line-height: normal;">&lt;img srcset=&quot;small.jpg 1x, large.jpg 2x&quot;&#10;   src=&quot;small.jpg&quot;&#10;   alt=&quot;info about image&quot; /&gt;
+</code></pre>
+<aside class="notes">
+  - if you really, really want to send these high-res images at 2x
+  - can use srcset to detect device-pixel-ratio
+  - same support as picture as its a part of the same responsive images sepc,
+  - determines resolution (1x or 2x) and send images this way
+</aside>
+        </section>
+
         <section data-background-color="black">
           <h1>Step 2: Consider Image Format</h1>
         </section>
@@ -1732,7 +1753,7 @@
 
   <section data-background-image="../img/aea-homepage.jpg">
   <aside class="notes">
-  What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
+  - What AEA is doing is using media queries to send different image sizes, so theyre doing a good job of this
   </aside>
   </section>
 
@@ -1750,7 +1771,7 @@
     alt="a happy little tree"&gt;
 &lt;/picture&gt;</code></pre>
           <aside class="notes" data-markdown>
-            - In the end, If you want to send really high quality assets, please use the picture element
+            - Another way to do this detection is through the picture element, with media and srcst attributes
             - if you're not concerned about performance, data access around the world (where many ppl are exclusively on mobile devices),
             - even if your audience is entirely 24-year-old techies w/fast internet and Macbooks, you still need to consider mobile performance</aside>
         </section>
@@ -1853,10 +1874,12 @@
             <li><a href="https://css-tricks.com/the-blur-up-technique-for-loading-background-images/">"Blur-Up" Technique</a></li>
             <li><a href="https://jmperezperez.com/medium-image-progressive-loading-placeholder/">Medium's Image Loading Technique</a></li>
             <li><a href="https://daverupert.com/2015/12/intrinsic-placeholders-with-picture/">Intrinsic Placeholders</a></li>
+            <li><a href="http://codepen.io/shshaw/post/responsive-placeholder-image">Data URI Placeholders</a></li>
             <li><a href="https://webkit.org/blog/6784/new-video-policies-for-ios/">iOS Video Autoplay News</a></li>
             <li><a href="https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/">Facebook Image Loading Technique</a></li>
             <li><a href="http://scottjehl.github.io/picturefill/">Picturefill</a></li>
   <li><a href="https://research.googleblog.com/2017/03/announcing-guetzli-new-open-source-jpeg.html">Guetzli Compression</a></li>
+
           </ul>
         </section>
   </div>
