@@ -81,13 +81,16 @@
             <li class="fragment"><h3><span class="blank-space-intro">Solutions:</span> Automatic to Manual</h3></li>
             <li class="fragment"><h3><span class="blank-space-intro">Example Time:</span> Yay!</h3></li>
           </ol>
+          <aside class="notes">
+            This talk is going to be a journey. We're going to talk about high-level concepts and get a little technical. We're going to show the impact of some of these techniques in action. And in the end, we're going to show what happens when we combine them.
+          </aside>
         </section>
 
         <section data-background-image="img/mixin/mixin.jpg">
           <h2 class="fragment blank-space">1.1 MB --> 348 KB</h2>
           <aside class="notes" data-markdown>
-            - And we're going to wrap this all with an example: This site
-            - We're going to get this site from 1.1 MB to 348 KB without changing its style
+            - By the end of the talk, you'll learn how to optimize images for a better user experience
+            - we're going to get this site from 1.1 MB to 348 KB without changing its style
             - And we're going to do this with just image savings from what we've gone over in this presentation
             - 316% Savings in Image Sizes
           </aside>
@@ -128,7 +131,7 @@
             - Now the cameras we have with us take 12MP photos (iPhone 7 specs)
             - I want everyone to do me a favor, get your phone out, and take a selfie
             - i love selfies
-            - if you dont like selfies, you can take an "everyone-elsie" like Jeremy showed us
+            - if you dont like selfies, you can take an "everyone-elsie"
             - On an avg iPhone 6, the photo size is 2.6 MB
             - Thats twice as big as the recommended initial content render on a website (which is 1MB for usable conent)
             - We've just introduced 910 MB of photos into this world -- and thats if you only took *one* photo
@@ -1622,6 +1625,111 @@
           </aside>
         </section>
 
+        <section data-background-image='img/servers.jpg'>
+          <aside class="notes" data-markdown>
+            - Before we go into our example, I want to quickly talk about server-side image optimization because its very powerful
+          </aside>
+        </section>
+
+        <section data-background-color="RGB(63, 63, 63)">
+          <h3>.htaccess</h3>
+          <pre>
+            <code>## EXPIRES CACHING ##
+&lt;IfModule mod_expires.c&gt;
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType image/webp "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+&lt;/IfModule&gt;
+## EXPIRES CACHING ##</code>
+          </pre>
+          <aside class="notes" data-markdown>
+            - The first thing we can do is leverage cache to keep our media alive
+            - In this example, we're setting our .htaccess to preserve images for a year and also our CSS?HTML/JS for a month (because they're likely to change faster and don't need to be saved for as long)
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/server-talking.png" alt="">
+          <aside class="notes" data-markdown>
+            - Another thing we can do is predetermine the optimal image format and send that to the user to load as soon as they land on the page (remember all of the talk about choosing the best format type?)
+            - Here is an example of sending WebP (using NGINX as the server)
+          </aside>
+        </section>
+
+        <section data-background-color="RGB(63, 63, 63)"><h3>.nginx-webp.conf</h3>
+          <pre>            
+<code>  user www-data;
+
+  http {
+    # Basic Settings
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+
+    # image/webp webp;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    # Conditional variables
+    map $http_accept $webp_suffix {
+      default   "";
+      "~*webp"  ".webp";
+    }
+
+    # Minimal server
+    server {
+      listen 80 default_server;
+      listen [::]:80 default_server ipv6only=on;
+      root /usr/share/nginx/html;
+      index index.html;
+
+      # Make site accessible from location
+      # This ex is localhost
+      server_name localhost;
+      location ~* ^/images/.+\.(png|jpg)$ {
+        root /home/www-data;
+        add_header Vary Accept;
+        try_files $uri$webp_suffix $uri =404;
+      }
+    }
+  }</code></pre>
+<aside class="notes" data-markdown>
+  - We need to:
+  1. Determine a consistent naming scheme and location ( i.e. `unicorn.png` --> `unicorn.png.webp`)
+  2. Write script to read browser headers looking for an `HTTP Accept header` for WebP (or whatever format you choose)
+  3. Make sure to serve original files if there is no WebP counterpart
+</aside>
+</section>
+
+<section><h3>.nginx-webp.conf</h3>
+<pre style="padding:2em; font-size: 1.9rem">            
+<code>
+  http {
+    #...
+    gzip on;
+    gzip_disable "msie6";
+  }
+
+</code></pre>
+
+  <aside class="notes" data-markdown>
+  - Building off of that last example, with a few lines of code, we can also GZIP our assets inside of the http object
+  - This is important for text-based assets to greatly reduce file size
+  - For images, this means making our SVGs really small
+  - With these server configurations, there are many ways to do this, so I would just look up your own configurations or ask your dev-ops team to look into these things
+  </aside>
+</section>
+
         <!-- Section Six: Lets Do The Thing (Mixin Example) -->
 
         <section data-background-color="#004236">
@@ -1814,32 +1922,11 @@
         </section>
 
          <section data-background-color="black">
-          <h1>Step 4: Cache Your Images</h1>
-        </section>
-
-        <section>
-          <h3>.htaccess</h3>
-          <code>
-            <pre>## EXPIRES CACHING ##
-&lt;IfModule mod_expires.c&gt;
-ExpiresActive On
-ExpiresByType image/jpg "access 1 year"
-ExpiresByType image/jpeg "access 1 year"
-ExpiresByType image/gif "access 1 year"
-ExpiresByType image/png "access 1 year"
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/html "access 1 month"
-ExpiresByType application/pdf "access 1 month"
-ExpiresByType text/x-javascript "access 1 month"
-ExpiresByType application/x-shockwave-flash "access 1 month"
-ExpiresByType image/x-icon "access 1 year"
-ExpiresDefault "access 1 month"
-&lt;/IfModule&gt;
-## EXPIRES CACHING ##</pre>
-          </code>
+          <h1>Step 4: Configure Your Server</h1>
           <aside class="notes">
-            - I didn't talk about server-side image optimization too much in this presentation, but this is another option that could automatically save you a lot of reload and rebuild time on repeating visits
-            - A month ago, I was in a conference in South Africa and got some really interesting insights about internet usage by some of the attendees
+            - Remember to leverage that server configuration if you have access to it
+            - Cache your images, turn on gzip compression, send the proper image format
+            - A few months ago, I was in a conference in South Africa and got some really interesting insights about internet usage by some of the attendees
           </aside>
         </section>
 
