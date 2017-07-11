@@ -82,32 +82,49 @@
             <li class="fragment"><h3><span class="blank-space-intro">Example Time:</span> Yay!</h3></li>
           </ol>
           <aside class="notes">
-            This talk is going to be a journey. We're going to talk about high-level concepts and get a little technical. We're going to show the impact of some of these techniques in action. And in the end, we're going to show what happens when we combine them.
+            This talk is going to be a journey. We're going to cover a lot, from technical implementations to design considerations. And in the end, we're going to show what happens when we combine them.
           </aside>
         </section>
 
         <section data-background-image="img/mixin/mixin.jpg">
           <h2 class="fragment blank-space">1.1 MB --> 348 KB</h2>
           <aside class="notes" data-markdown>
-            - By the end of the talk, you'll learn how to optimize images for a better user experience
-            - we're going to get this site from 1.1 MB to 348 KB without changing its style
-            - And we're going to do this with just image savings from what we've gone over in this presentation
-            - 316% Savings in Image Sizes
+            - We're going to get this site from 1.1 MB to 348 KB without changing its style as a wrap up
+             - Before I start, I want to stress that image optimization is a team problem
+            - and this is because performance is your user experience
+            - it may be the most important thing about your application that differentiates it from competition
+            - So it doesn't matter if you're a designer or a developer or a PM, you're a *teammate*, and this is a *team* problem
           </aside>
         </section>
 
         <section data-background-image="img/fedex_guy.gif">
           <aside class="notes" data-markdown>
-            - Before I start, I want to stress that image optimization is a team problem
-            - and this is because performance is your user experience
-            - it may be the most important thing about your application that differentiates it from competition
-            - So it doesn't matter if you're a designer or a developer or a PM, you're a *teammate*, and this is a *team* problem
             - the point is that we can't do this
             - just throw it over the fence to another team, we need to take responsibility for image performance on every level
           </aside>
         </section>
 
         <!-- Section One: Setup - Why this is important -->
+        <section>
+          <h2>Http Archive Data</h2>
+          <img src="img/avg-bytes-illi.svg" alt="">
+          <aside class="notes" data-markdown>
+            - Lets first take a look at where we are today
+          </aside>
+        </section>
+
+        <section>
+          <h1>66% Images</h1>
+  <aside class="notes">
+  </aside>
+        </section>
+
+        <section>
+          <h1>The average single JPG is <span class="blank-space">3x bigger</span> than the average JavaScript file</h1>
+          <aside class="notes" data-markdown>
+            - So while we're arguing about including jQuery or not, remove one image request and have all the jQuery you want
+          </aside>
+        </section>
 
         <section data-background-color="RGB(254, 232, 97)">
           <img src="img/the-evolution-of-the-camera_23-2147515826.jpg" alt="">
@@ -169,7 +186,7 @@
 
         <section data-background="img/CwQhZ0aWcAAgLpe.jpg">
           <aside class="notes" data-markdown>
-            - 5 months ago, for the first time ever, Mobile+tablet usage has eclipsed desktop usage
+            - Last October, for the first time ever, Mobile+tablet usage has eclipsed desktop usage
             - Google study from September 2016
             - surveyed over 10,000 mobile websites on 3G
   - lets play a game
@@ -264,29 +281,6 @@
   </aside>
   </section>
 
-        <section>
-          <h2>Http Archive Data</h2>
-          <img src="img/avg-bytes-illi.svg" alt="">
-          <aside class="notes" data-markdown>
-            - March 15, 2017 run
-            - biggest asset by far is images
-          </aside>
-        </section>
-
-        <section>
-          <h1>66% Images</h1>
-  <aside class="notes">
-  - This has gone up 2% since 5 months ago, and avg. size up 60kb since then
-  </aside>
-        </section>
-
-        <section>
-          <h1>The average single JPG is <span class="blank-space">2.3x bigger</span> than the average JavaScript file</h1>
-          <aside class="notes" data-markdown>
-            So while we're arguing about including jQuery or not, remove one image request and have all the jQuery you want
-          </aside>
-        </section>
-
   <section>
    <blockquote>
    "You can't be a web performance expert without being an image expert."
@@ -372,7 +366,6 @@
             <li class="fragment"><h2>PNG</h2></li>
             <li class="fragment"><h2>JPG</h2></li>
             <li class="fragment"><h2>WEBP</h2></li>
-            <li class="fragment"><h2>BPG</h2></li>
             <li class="fragment"><h2>FLIF</h2></li>
           </ul>
         </section>
@@ -441,15 +434,6 @@
             </aside>
         </section>
 
-      <section>
-        <img src="img/08-img-compression--noframe.png" alt="">
-          <aside class="notes" data-markdown>
-     - here's a very basic illustration of the differences between the two
-     - explain
-     - everytime you resave a lossy image, like a jpg, even at 100% quality, it will lose detail
-  </aside>
-      </section>
-
         <section data-background-image="img/screenshot-comparison.jpg" style="text-align:center">
           <div class="section--half"><h1 class="blank-space" style="display:inline">PNG</h1></div>
           <div class="section--half"><h1 class="blank-space" style="display:inline">JPG</h1></div>
@@ -461,6 +445,14 @@
             - jpg also looks at difference of one pixel to another and discards the excess (it rounds where it can)
           </aside>
         </section>
+      <section>
+        <img src="img/08-img-compression--noframe.png" alt="">
+          <aside class="notes" data-markdown>
+     - here's a very basic illustration of the differences between the two
+     - explain
+     - everytime you resave a lossy image, like a jpg, even at 100% quality, it will lose detail
+  </aside>
+      </section>
 
         <section>
           <img style="width: 100%" src="img/jpegcompression.jpg" alt="">
@@ -484,20 +476,10 @@
           - and people are continuing to iterate on JPEG because its so widely used
           - Google *just* released Guetzli, a new open source algorithm last month
           - claims to produce high quality JPEG images, compressed 35% smaller than currently available method
+          - Guetzli incorporates the concept of cells in the retina to make decisions in quantization instead of following a pre-determined table
+          - tradeoff: images take longer to compress and results are unreliable
+          - especially true on smaller images (works best as larger sizes)
           </aside>
-          </section>
-
-          <section>
-            <img src="img/guetzli1.png" style="width: 100%" alt="">
-            <aside class="notes" data-markdown>
-            - one on the right is guetzli compression, center is normal png compression
-            - you can see very small differences in color, but its hard to see
-            - Guetzli uses an AI-based compression metric
-            - that incorporates the concept of cells in the retina to make decisions in quantization
-            - the quantization table changes per image with Guetzli, it's not an absolute set of values like it normally is
-            - tradeoff: images take longer to compress and results are unreliable
-            - especially true on smaller images (works best as larger sizes)
-            </aside>
           </section>
 
           <section>
@@ -505,20 +487,10 @@
             <div class="section--half"><img src="img/guetzliex2.png" alt=""><h3>167 KB</h3></div>
             <a href="http://cloudinary.com/blog/a_closer_look_at_guetzli" class="source">Cloudinary</a>
             <aside class="notes" data-markdown>
-            - there was an article that came out yesterday from Eric Portis at Cloudinary that looked more closely into this
+            - there was an article that came out from Eric Portis at Cloudinary that looked more closely into this
             - he compared a few examples, and saw that Guetzli saved images a bit more sharply than auto compression, which he compared it to
             - q_auto is "automatic quality" within Cloudinary
             </aside>
-          </section>
-
-
-          <section>
-          <div class="section--half"><img src="img/guetzliex2q.png" alt=""><h3>118 KB</h3></div>
-          <div class="section--half"><img src="img/guetzliex.png" alt=""><h3>111 KB</h3></div>
-          <aside class="notes" data-markdown>
-          - in this example you can see that guetzli gets rid of some of the detail in the background
-          - the compression *is* smaller, but not 35% smaller
-          </aside>
           </section>
 
         <section>
@@ -669,6 +641,10 @@
         </section>
 
         <section>
+          <img src="img/edge-uservoice.jpg" alt="">
+        </section>
+
+        <section>
           <h2>Converting to WebP</h2>
         </section>
 
@@ -773,24 +749,27 @@
           <code>mogrify -format webp *.jpg</code>
         </section>
 
-        <section>
-          <h2>WebP Polyfill: 67kb</h2>
-          <code style="font-size: .43em">< script type="text/javascript" src="https://cdn.jsdelivr.net/webpjs/0.0.2/webpjs-0.0.2.min.js"></script></code>
-          <aside class="notes" data-markdown>
-            - its called WebP.js
-            - IE6+
-            - study done by Adrian James + Matt Shull in a post for smashing magazine determined this to be found this to be the most lightweight solution that works in all browsers
-            - however, it may be kind of weird to reqiure JS for your Firefox or Safari users to see your images
-            - you may want to do this conversion server-side instead
-          </aside>
-        </section>
-
         <section data-background-color="RGB(17, 149, 148)">
           <h1>✨ Picture Element ✨</h1>
-          <aside class="notes">
+          <aside class="notes" data-markdown>
+            - there is a WebP polyfill, but it doesn't make sense to require JS for everyone on Safari, Edge, & Firefox to access content, so you can do one better and use the pictre element!
             - the picture element is some html magic that we can use instead, and we can use today
           </aside>
         </section>
+
+        <section data-background-color="RGB(63, 63, 63)">
+      <pre><code style="padding: 1em; font-size: 1.9rem;
+line-height: normal;">&lt;picture&gt;
+  &lt;source type="image/webp" 
+          srcset="images/unicorn.webp"&gt;
+
+  &lt;img src="images/unicorn.jpg" 
+      alt="a unicorn"&gt;
+&lt;/picture&gt;</code></pre>
+<aside class="notes">
+  - can send the webp using srcset with the picture element, and send a jpg as a backup
+</aside>
+  </section>
 
         <section>
           <img src="img/caniuse--picture.jpg" alt="">
@@ -801,21 +780,17 @@
           <h2>WebM</h2>
           <img src="img/chanelsite.jpg" alt="">
           <aside class="notes" data-markdown>
-            - just like WebP, WebM is now a Google initiative after acquiring O2 and some of the other companies that were working on it
+            - WebM, what inspired WebP, really makes a massive impact, and is better supported
           </aside>
-        </section>
-
-        <section>
-          <img src="img/caniuse--webm.jpg" alt="">
-        </section>
-
-        <section data-background-image="img/webmconvert.jpg">
-          <b></b>
         </section>
 
         <section>
           <div class="section--half"><video autoplay controls loop src="img/chanel.mp4" alt=""></video><p>mp4: 3.5 MB</p></div>
           <div class="section--half"><video autoplay controls loop src="img/chanel.webm" alt=""></video><p>webm: 1.3 MB</p></div>
+        </section>
+
+        <section>
+          <img src="img/caniuse--webm.jpg" alt="">
         </section>
 
         <section data-background-color="RGB(63, 63, 63)">
@@ -824,6 +799,7 @@
   &lt;source src="src/video.mp4"
           type='video.mp4;
           codecs="avc1.42E01E, mp4a.40.2"'/&gt;
+
   &lt;source src="src/video.webm"
           type='video.webm;
           codecs="vp8, vorbis"'/&gt;
@@ -835,21 +811,12 @@
           <h1>More Options, <br>More Power</h1>
         </section>
 
-        <section data-background-color="RGB(17, 149, 148)">
-          <h1>Experimental Formats</h1>
-        </section>
-
         <section data-background-image="img/explosion.gif">
+        <h1>Free Lossless Image Format (FLIF)</h1>
           <aside class="notes" data-markdown>
+            - Now I'm going to talk about an experimental format called FLIF, and this one is super new but also blows my mind with the tech people are considering these days
             - gif pattern diffusion!
             - these are really promising future formats that may very well be the future of image types
-          </aside>
-        </section>
-
-        <section>
-          <h1>Free Lossless Image Format (FLIF)</h1>
-          <aside class="notes" data-markdown>
-            The Newest kid on the block: FLIF
           </aside>
         </section>
 
@@ -862,7 +829,6 @@
           <div class="section--half">
             <ul style="font-size: .8em; line-height: 1.6">
               <li><strong>14%</strong> smaller than lossless WebP</li>
-              <li class="fragment"><strong>22%</strong> smaller than lossless BPG</li>
               <li class="fragment"><strong>33%</strong> smaller than brute-force crushed PNG files</li>
               <li class="fragment"><strong>43%</strong> smaller than typical PNG files</li>
               <li class="fragment"><strong>46%</strong> smaller than optimized Adam7-interlaced PNG files</li>
@@ -1627,7 +1593,8 @@
 
         <section data-background-image='img/servers.jpg'>
           <aside class="notes" data-markdown>
-            - Before we go into our example, I want to quickly talk about server-side image optimization because its very powerful
+            - Before we get into our wrap-up example, I want to quickly talk about server-side image optimization because its very powerful
+            - I'm just going to mention 3 things we should be doing to improve media performance heree
           </aside>
         </section>
 
@@ -1711,7 +1678,7 @@ ExpiresDefault "access 1 month"
 </aside>
 </section>
 
-<section><h3>.nginx-webp.conf</h3>
+<section data-background-color="RGB(63, 63, 63)"><h3>.nginx-webp.conf</h3>
 <pre style="padding:2em; font-size: 1.9rem">            
 <code>
   http {
@@ -1798,7 +1765,9 @@ ExpiresDefault "access 1 month"
 
         <section data-background-image="img/mixin/andy.jpg">
           <b></b>
-          <aside class="notes" data-markdown>If you can't really tell the difference on your retina display, your user sure as heck won't</aside>
+          <aside class="notes" data-markdown>
+            - If you can't really tell the difference on your retina display, your user sure as heck won't
+            - But if you really, really want to send these high-res images, you can use srcset within the picture element to detect device-pixel-ratio</aside>
         </section>
 
         <section data-background-image="img/mixin/andy-diff.jpg">
@@ -1847,22 +1816,6 @@ ExpiresDefault "access 1 month"
           </aside>
         </section>
 
-        <section data-background-color="RGB(63, 63, 63)">
-<pre><code style="padding: 1em; font-size: 1.9rem;
-    line-height: normal;">&lt;img srcset=&quot;small.jpg 1x, large.jpg 2x&quot;&#10;   src=&quot;small.jpg&quot;&#10;   alt=&quot;info about image&quot; /&gt;
-</code></pre>
-<aside class="notes" data-markdown>
-  - if you really, really want to send these high-res images at 2x
-  - can use srcset to detect device-pixel-ratio
-  - same support as picture as its a part of the same responsive images sepc,
-  - determines resolution (1x or 2x) and send images this way
-</aside>
-        </section>
-
-        <section data-background-image="img/mixin/andy-diff2.jpg">
-        <aside class="notes">This example is the difference between sending a large file and sending a properly fitted file -- if you cant see the differences, your users definitely cant. And you're saving a ton in image sizes</aside>
-        </section>
-
         <section data-background-color="black">
           <h1>Step 2: Consider Image Format</h1>
         </section>
@@ -1881,8 +1834,11 @@ ExpiresDefault "access 1 month"
         </section>
 
         <section data-background-color="black">
-          <h1>Step 3: Choose the Best Image Quality</h1>
-          <aside class="notes" data-markdown>smaller quality on smaller, less important images, consider compressive images</aside>
+          <h1>Step 3: Responsive Images</h1>
+          <aside class="notes" data-markdown>- use smaller quality on smaller, less important images served at smaller sizes
+          - don't send massive retina images to all devices
+          - There's no baseline to measure this, but it makes a massive impact based on your decided image size breaks, far more than 316%
+          </aside>
         </section>
 
   <section data-background-image="../img/aea-homepage.jpg">
@@ -1906,24 +1862,12 @@ ExpiresDefault "access 1 month"
     alt="a happy little tree"&gt;
 &lt;/picture&gt;</code></pre>
           <aside class="notes" data-markdown>
-            - Another way to do this detection is through the picture element, with media and srcst attributes
-            - if you're not concerned about performance, data access around the world (where many ppl are exclusively on mobile devices),
-            - even if your audience is entirely 24-year-old techies w/fast internet and Macbooks, you still need to consider mobile performance</aside>
-        </section>
-
-        <section>
-          <div class="section--half"><img src="img/clothes.jpg" alt=""></div>
-          <div class="section--half"><img style="margin-top:2.25em" src="img/criteo-mobile-commerce-report-q42014-6-638.jpg" alt=""></div>
-
-          <aside class="notes" data-markdown>
-            - and thats bc in the high-end/luxury market speed is even more important
-            - In America, those users are the ones more likely to shop on mobile devices and make quick decisions rather than wait and browse for the best deals on browsers
-          </aside>
+            - Another way to do this detection is through the picture element, with media and srcst attributes</aside>
         </section>
 
          <section data-background-color="black">
           <h1>Step 4: Configure Your Server</h1>
-          <aside class="notes">
+          <aside class="notes" data-markdown>
             - Remember to leverage that server configuration if you have access to it
             - Cache your images, turn on gzip compression, send the proper image format
             - A few months ago, I was in a conference in South Africa and got some really interesting insights about internet usage by some of the attendees
@@ -1954,7 +1898,7 @@ ExpiresDefault "access 1 month"
           <h1>Step 5: Profit! 
             <small>(Literally)</small></h1>
           <aside class="notes" data-markdown>
-            - Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year—that's $21.8 billion Rand
+            - Amazon calculated that a page load slow-down of just one second could cost it $1.6 billion in sales each year
             - Even if you don't care about page speed and information access, improving performance will still be worth it
           </aside>
         </section>
@@ -1975,14 +1919,15 @@ ExpiresDefault "access 1 month"
             <li class="fragment">Compress your smaller images to low qualities</li>
             <li class="fragment">Always run all images through an optimizer</li>
             <li class="fragment">Small improvements are still improvements</li>
-            <li class="fragment">Educate the entire team</li>
+            <li class="fragment">Involve the entire team</li>
           </ul>
         </section>
 
   <section>
   <img src="img/balance.svg" alt="">
   <aside class="notes" data-markdown>
-            - while this talk was a little heavy-handed on the optimization end, find balance
+  - In the end, it's all about finding balance between delivering high quality content and optimizing that content
+  - Remember: it's all about the user experience in the end
   </aside>
   </section>
 
